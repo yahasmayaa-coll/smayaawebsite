@@ -76,12 +76,13 @@
     ddBtn.addEventListener('click', e => { e.stopPropagation(); setDD(hover || !dd.classList.contains('open')); });
     if (hover) { dd.addEventListener('mouseenter', () => setDD(true)); dd.addEventListener('mouseleave', () => setDD(false)); }
     document.addEventListener('click', () => setDD(false));
+    addEventListener('keydown', e => { if (e.key === 'Escape') setDD(false); });
   }
   const burger = $('#burger');
   const setMenu = o => { document.body.classList.toggle('menu-open', o); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); };
   burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
   $$('#nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-  addEventListener('keydown', e => { if (e.key === 'Escape') { setMenu(false); setDD(false); } });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
   /* ---------------- reveal on scroll ---------------- */
   // stroke lengths for the line-draw icons

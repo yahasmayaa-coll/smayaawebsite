@@ -214,6 +214,23 @@ html.js .ws-step:not(.on){opacity:.3}
 .laptop{width:min(100%,1060px);margin:0 auto}
 @media (max-width:900px) and (orientation:landscape) and (max-height:600px){.laptop{width:min(100%,calc((100svh - 90px) * 1.183))}}
 
+/* ---------- demo video pop-up ---------- */
+.btn-play .pl{display:grid;place-items:center;width:26px;height:26px;margin:-4px 2px -4px -8px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .35s var(--ease),background .3s}
+.btn-play .pl svg{width:12px;height:12px;fill:currentColor;margin-left:2px}
+.btn-play:hover .pl{transform:scale(1.12);background:rgba(255,255,255,.28)}
+.vmod{width:min(1180px,calc(100vw - 32px));max-width:none;max-height:none;margin:auto;padding:0;border:0;background:transparent;overflow:visible;color:#fff}
+.vmod::backdrop{background:rgba(4,26,34,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.vmod[open]{animation:vIn .45s var(--ease)}
+.vmod[open]::backdrop{animation:bIn .35s ease}
+@keyframes vIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes bIn{from{opacity:0}to{opacity:1}}
+.vmod .vbox{position:relative;border-radius:20px;overflow:hidden;background:#0a3a4a;box-shadow:0 50px 120px -30px rgba(0,0,0,.6),0 0 0 1px rgba(179,238,243,.18)}
+.vmod video{display:block;width:100%;height:auto;max-height:calc(100svh - 120px);aspect-ratio:16/9;background:#0a3a4a}
+.vmod .vclose{position:absolute;top:-52px;right:0;display:flex;align-items:center;gap:8px;height:40px;padding:0 16px 0 12px;border-radius:999px;font-size:14px;color:#e8f7f9;background:rgba(255,255,255,.1);border:1px solid rgba(220,245,248,.35);transition:background .25s}
+.vmod .vclose:hover{background:rgba(255,255,255,.2)}
+.vmod .vclose svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+@media (max-width:600px){.vmod{width:calc(100vw - 20px)}.vmod .vbox{border-radius:14px}}
+@media (prefers-reduced-motion:reduce){.vmod[open],.vmod[open]::backdrop{animation:none}}
 </style>
 </head>
 <body>
@@ -295,7 +312,7 @@ html.js .ws-step:not(.on){opacity:.3}
   <section class="intro" aria-label="About SMAYAA">
     <div class="wrap rv">
       <p>Designed For Industries With High Freshwater Consumption, SMAYAA Helps Reduce Water Consumption, Reduce/Eliminate Water Related Production Issues For Critical Industries, Improve Cooling Efficiency, Optimize Water Reuse And Recycling, And Minimize Operating Costs Through Intelligent Performance Monitoring And Data-Driven Recommendations.</p>
-      <a class="btn" href="#problems">See how it works <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-play" href="video/smayaa-demo.mp4" data-video aria-haspopup="dialog"><span class="pl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>See how it works</a>
     </div>
   </section>
 
@@ -519,11 +536,18 @@ html.js .ws-step:not(.on){opacity:.3}
   </div>
 </footer>
 
+<dialog class="vmod" id="vmod" aria-label="SMAYAA.ai demo video">
+  <button class="vclose" type="button" id="vclose" aria-label="Close video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Close</button>
+  <div class="vbox">
+    <video id="vdemo" controls playsinline preload="none" poster="video/smayaa-demo.jpg" data-src="video/smayaa-demo.mp4"></video>
+  </div>
+</dialog>
 
-<script src="assets/site.js?v=1c6a055c" defer></script>
+
+<script src="assets/site.js?v=27d7c2ec" defer></script>
 <script src="assets/net.js?v=5e1564d4" defer></script>
 <script src="assets/screens.js?v=e8c07508" defer></script>
-<script src="assets/home.js?v=b8d914b3" defer></script>
+<script src="assets/home.js?v=1d9044df" defer></script>
 <script src="assets/logo.js?v=650fa6c9" defer></script>
 </body>
 </html>

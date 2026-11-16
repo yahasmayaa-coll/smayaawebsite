@@ -192,3 +192,21 @@
   });
 
 })();
+
+// "See how it works": the demo video in a pop-up with the browser's own controls (play/pause, volume, seek, fullscreen)
+(() => {
+  'use strict';
+  const dlg = document.getElementById('vmod'), vid = document.getElementById('vdemo');
+  if (!dlg || !vid || typeof dlg.showModal !== 'function') return;     // old browsers just follow the link to the file
+  let opener = null;
+  document.querySelectorAll('[data-video]').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); opener = a;
+    if (!vid.src) vid.src = vid.dataset.src;                            // load the file only the first time it's opened
+    dlg.showModal();
+    vid.play().catch(() => {});                                          // the click counts as a gesture, so it plays with sound
+  }));
+  const close = () => dlg.open && dlg.close();
+  document.getElementById('vclose').addEventListener('click', close);
+  dlg.addEventListener('click', e => { if (e.target === dlg) close(); });   // click outside the video
+  dlg.addEventListener('close', () => { vid.pause(); if (opener) opener.focus(); });
+})();
