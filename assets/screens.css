@@ -1,0 +1,97 @@
+/* SMAYAA platform screens drawn in HTML inside a laptop photo (screens.js).
+   .lapx       the laptop: a frame image with a see-through display (img/laptop-frame.webp or laptop-stand-frame.webp)
+   .lap-scr    the opening behind the frame; the screen inside is designed at 1180 x 764 and scaled to fit */
+.lapx{position:relative;display:block;margin:0}
+.lapx .lap-frame{position:relative;z-index:2;display:block;width:100%;height:auto;pointer-events:none;user-select:none}
+.lap-scr{position:absolute;z-index:1;overflow:hidden;background:#f3f8fa;
+  left:var(--sl,14.933%);top:var(--st,3.182%);width:var(--sw,71.467%);height:var(--sh,78.864%)}
+.lapx.stand .lap-scr{--sl:16.282%;--st:2.123%;--sw:68.718%;--sh:52.627%}
+.sx{position:absolute;left:0;top:0;width:1180px;height:764px;transform-origin:0 0;transform:scale(var(--k,.5));
+  --ink:#123a4b;--mut:#647c86;--hair:#e2ecf0;--alert:#c8641c;--bad:#c23b31;--good:#0f7f9b;
+  display:flex;flex-direction:column;background:#f3f8fa;color:var(--ink);font:13px/1.45 Jost,system-ui,sans-serif;text-align:left;transition:opacity .45s var(--ease)}
+.sx *{box-sizing:border-box}
+.sx.out{opacity:0}
+
+/* browser bar (left of the camera notch) */
+.sx-bar{flex:none;display:flex;align-items:center;gap:8px;height:34px;padding:0 14px;background:#202124}
+.sx-bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}
+.sx-bar i:nth-child(2){background:#febc2e}.sx-bar i:nth-child(3){background:#28c840}
+.sx-bar span{margin-left:16px;width:300px;padding:4px 14px;border-radius:12px;background:#35363a;color:#c8ccd0;font-size:12px;letter-spacing:.01em}
+
+/* app header with the SMAYAA logo */
+.sx-top{flex:none;display:flex;align-items:center;gap:18px;padding:12px 22px;background:#fff;border-bottom:1px solid var(--hair);font-size:12.5px;color:var(--mut)}
+.sx-top .lg{display:block;height:30px;width:auto}
+.sx-mod{padding-left:18px;border-left:1px solid var(--hair);font-size:15px;font-weight:500;color:var(--ink)}
+.sx-site{color:var(--mut)}
+.sx-date{font-variant-numeric:tabular-nums}
+.sx-st{display:inline-flex;align-items:center;gap:8px;margin-left:auto;padding:5px 12px;border-radius:999px;font-weight:500;color:var(--good);background:#e8f6f8}
+.sx-st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.sx-st.w{color:var(--alert);background:#fdf0e6}.sx-st.a{color:var(--bad);background:#fbeceb}
+.sx-st em{font-style:normal;font-weight:400;color:var(--mut);padding-left:10px;border-left:1px solid #cfe0e5}
+
+.sx-body{flex:1;display:flex;flex-direction:column;gap:14px;padding:16px 22px 18px;min-height:0}
+.sx-card{background:#fff;border-radius:14px;box-shadow:inset 0 0 0 1px var(--hair)}
+
+/* four readings */
+.sx-k{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;overflow:hidden}
+.k{padding:15px 20px 13px;border-left:1px solid var(--hair);min-width:0}
+.k:first-child{border-left:0}
+.k dt{font-size:12.5px;color:var(--mut)}
+.k dd{margin:6px 0 0;display:flex;align-items:baseline;gap:5px}
+.k dd b{font-size:28px;font-weight:500;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.k dd small{font-size:12px;color:var(--mut)}
+.k svg{display:block;width:100%;height:20px;margin:10px 0 6px;overflow:visible}
+.k svg path{fill:none;stroke:#8fb9c6;stroke-width:1.4;stroke-linejoin:round}
+.k .rg{font-size:11.5px;color:#93a9b1;font-variant-numeric:tabular-nums}
+.k.w dd b,.k.w .rg{color:var(--alert)}.k.w svg path{stroke:var(--alert)}
+.k.a dd b,.k.a .rg{color:var(--bad)}.k.a svg path{stroke:var(--bad)}
+
+/* chart + issues */
+.sx-m{flex:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;min-height:0}
+.sx-c{margin:0;padding:16px 20px}
+.sx-c figcaption{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 6px;margin-bottom:10px;font-size:13px;color:var(--mut)}
+.sx-c figcaption b{font-weight:500;color:var(--ink)}
+.sx-c figcaption span{margin-left:auto;font-size:12px;color:#93a9b1}
+.sx-c svg{display:block;width:100%;height:auto;overflow:visible}
+.sx-c text{font-size:10.5px;fill:#9ab0b8;font-family:inherit;font-variant-numeric:tabular-nums}
+.sx-c .gl{stroke:#e6eef1;stroke-dasharray:2 4}
+.sx-c .bd{fill:#dcf0f3}
+.sx-c .ex{fill:none;stroke:#5cc4d6;stroke-width:1.2;stroke-dasharray:4 4}
+.sx-c .ac{fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linejoin:round}
+.sx-c .ou{fill:none;stroke:var(--alert);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.sx-c .nw{fill:#fff;stroke:var(--ink);stroke-width:2}.sx-c .nw.o{stroke:var(--alert)}
+.sx-c svg.w .ou{stroke:#8a63c9}.sx-c svg.w .nw.o{stroke:#8a63c9}
+.sx-v{margin:10px 0 0;padding-left:12px;border-left:2px solid var(--good);font-size:13px;line-height:1.55;color:var(--mut)}
+.sx-v b{font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.sx-v.w{border-color:#8a63c9}.sx-v.a{border-color:var(--alert)}
+
+.sx-i{padding:16px 20px}
+.sx-i h3{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:0 0 6px;font-size:13px;font-weight:500;color:var(--ink)}
+.sx-i h3 span{font-size:12px;font-weight:400;color:#93a9b1}
+.sx-i ol{list-style:none;margin:0;padding:0}
+.sx-i li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--hair)}
+.sx-i li:last-child{border-bottom:0;padding-bottom:0}
+.sx-i b{display:block;font-weight:500;font-size:13.5px;line-height:1.35}
+.sx-i small{display:block;margin-top:2px;font-size:11.5px;color:#93a9b1}
+.sx-i .pc{font-size:15px;font-weight:500;color:var(--mut);font-variant-numeric:tabular-nums}
+.sx-i i{grid-column:1/-1;height:3px;border-radius:3px;background:#e6eef1;overflow:hidden}
+.sx-i i::after{content:"";display:block;height:100%;width:calc(var(--r) * 100%);border-radius:3px;background:#9cc9d4;transform-origin:left;transition:transform 1.1s var(--ease) .2s}
+.sx-i li.w .pc,.sx-i li.w small{color:var(--alert)}.sx-i li.w i::after{background:var(--alert)}
+.sx-i li.a .pc,.sx-i li.a small{color:var(--bad)}.sx-i li.a i::after{background:var(--bad)}
+.sx-i li.op .pc,.sx-i li.op small{color:#7a52bf}.sx-i li.op i::after{background:#a98ae0}
+
+/* the one thing to do */
+.sx-a{flex:none;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:baseline;gap:4px 18px;padding:14px 20px;background:#effaf3;box-shadow:inset 0 0 0 1px #cdebd9}
+.sx-a span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#2e8a5a}
+.sx-a b{font-weight:500;font-size:14px}
+.sx-a em{font-style:normal;font-size:12px;color:var(--mut);white-space:nowrap}
+
+/* lines and bars draw in once the screen is seen */
+.sx .k svg,.sx .sx-c svg{clip-path:inset(0 100% 0 0);transition:clip-path 1.4s var(--ease) .15s}
+.sx.seen .k svg,.sx.seen .sx-c svg{clip-path:inset(0 0 0 0)}
+.sx:not(.seen) .sx-i i::after{transform:scaleX(0)}
+@media (prefers-reduced-motion:reduce){
+  .sx{transition:none}
+  .sx .k svg,.sx .sx-c svg{clip-path:none;transition:none}
+  .sx:not(.seen) .sx-i i::after{transform:none}
+}

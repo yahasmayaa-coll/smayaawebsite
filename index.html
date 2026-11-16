@@ -1,64 +1,226 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="loading">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SMAYAA.ai | AI-Powered Cooling Water Optimization – Coming Soon</title>
-<meta name="description" content="SMAYAA.ai uses machine learning, predictive analytics and engineering intelligence to optimize industrial cooling water: less water, better cooling performance, lower energy and more reliable equipment. Our new website is coming soon.">
-<meta name="robots" content="index, follow">
+<title>SMAYAA.ai | Machine Learning for Industrial Water &amp; Cooling Efficiency</title>
+<meta name="description" content="SMAYAA.ai uses machine learning to cut freshwater use, improve cooling efficiency, protect assets and lower operating costs for steel, power, pulp &amp; paper, cement, refineries, data centres and HVAC.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://smayaa.ai/">
-<meta name="theme-color" content="#0a3a4a">
+<meta name="theme-color" content="#0d4a5e">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SMAYAA.ai">
-<meta property="og:title" content="SMAYAA.ai | AI-Powered Cooling Water Optimization – Coming Soon">
-<meta property="og:description" content="Machine learning for industrial cooling water. Our new website is coming soon.">
+<meta property="og:title" content="SMAYAA.ai | Machine Learning for Industrial Water &amp; Cooling Efficiency">
+<meta property="og:description" content="Predict scaling, corrosion and fouling before they hit production. Save water, energy and chemicals with intelligent performance monitoring.">
 <meta property="og:url" content="https://smayaa.ai/">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SMAYAA.ai | Machine Learning for Industrial Water &amp; Cooling Efficiency">
+<meta name="twitter:description" content="Predict scaling, corrosion and fouling before they hit production. Save water, energy and chemicals.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b3eef3'/%3E%3Cstop offset='.5' stop-color='%235cc4d6'/%3E%3Cstop offset='1' stop-color='%230b7a98'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='url(%23g)' stroke-width='8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
-<script>document.documentElement.classList.add('js');</script>
+<script>document.documentElement.classList.add('js');
+// the logo intro plays on the first visit in this tab and on a reload; coming back to the home page skips it
+try{var d=document.documentElement,n=performance.getEntriesByType('navigation')[0],k='smy-intro';if(sessionStorage.getItem(k)&&!(n&&n.type==='reload')){d.classList.remove('loading');d.classList.add('no-intro');}sessionStorage.setItem(k,'1');}catch(e){}</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"SMAYAA.ai","url":"https://smayaa.ai/",
- "description":"Machine learning for industrial water, cooling and energy efficiency."}
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://smayaa.ai/#org","name":"SMAYAA.ai","url":"https://smayaa.ai/",
+  "description":"Machine learning for industrial water, cooling and energy efficiency."},
+ {"@type":"WebSite","@id":"https://smayaa.ai/#site","url":"https://smayaa.ai/","name":"SMAYAA.ai","publisher":{"@id":"https://smayaa.ai/#org"}},
+ {"@type":"SoftwareApplication","name":"SMAYAA","applicationCategory":"BusinessApplication","operatingSystem":"Web",
+  "publisher":{"@id":"https://smayaa.ai/#org"},
+  "description":"Predictive intelligence for cooling-water systems: reduces freshwater consumption, improves cooling efficiency, optimises water reuse and protects assets.",
+  "audience":{"@type":"BusinessAudience","audienceType":"Steel & Metal, Power Generation, Pulp & Paper, Cement Manufacturing, Refineries & Petrochemicals, Data Centres, HVAC & District Cooling, Water-Intensive Industries"}}
+]}
 </script>
+<link rel="stylesheet" href="assets/site.css?v=d2b06b60">
+<link rel="stylesheet" href="assets/screens.css?v=ab61aa86">
 <style>
-@font-face{font-family:Jost;font-weight:700;font-style:normal;src:url(data:font/woff2;base64,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) format('woff2')}
-:root{--teal:#0f7f9b;--pale:#b3eef3;--ease:cubic-bezier(.22,.8,.22,1)}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;color:#e8f7f9;font:400 16px/1.6 Jost,'Century Gothic',Futura,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-  background:radial-gradient(120% 80% at 20% 0%,#2f7c86 0%,transparent 60%),linear-gradient(180deg,#2b7180 0%,#2a6984 45%,#2b5d8c 100%);background-color:#2a6984}
-.page{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(28px,6vh,72px) 20px clamp(90px,14vh,140px);text-align:center;overflow:hidden}
-#net{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%;pointer-events:none}
-.page::after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(180deg,transparent,rgba(30,74,120,.55));pointer-events:none}
-.logo{position:relative;z-index:2;width:min(640px,88vw);height:clamp(150px,26vh,250px)}
-.logo svg{width:100%;height:100%;overflow:visible}
-#opener tspan:first-child{fill:#fff}
-.copy{position:relative;z-index:2;max-width:760px}
-.copy>*{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
-.done .copy>*{opacity:1;transform:none}
-.done .copy>:nth-child(2){transition-delay:.12s}.done .copy>:nth-child(3){transition-delay:.24s}.done .copy>:nth-child(4){transition-delay:.36s}
-.badge{display:inline-flex;align-items:center;gap:10px;margin:clamp(10px,3vh,26px) 0 20px;padding:8px 18px;border-radius:999px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;
-  background:rgba(255,255,255,.08);border:1px solid rgba(220,245,248,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.badge i{width:8px;height:8px;border-radius:50%;background:#9fecf2;box-shadow:0 0 0 0 rgba(159,236,242,.7);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(159,236,242,0)}100%{box-shadow:0 0 0 0 rgba(159,236,242,0)}}
-h1{margin:0 0 18px;font-weight:700;font-size:clamp(28px,3.6vw,52px);line-height:1.18;color:#fff;text-shadow:0 4px 30px rgba(5,40,60,.35)}
-h1 span{color:#9fecf2}
-.copy p{margin:0 auto;max-width:58ch;font-size:clamp(15px,1.2vw,18px);line-height:1.75;color:rgba(232,248,250,.86)}
-.inds{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;list-style:none;margin:28px 0 0;padding:0}
-.inds li{padding:6px 14px;border-radius:999px;font-size:13px;color:#dff4f7;background:rgba(255,255,255,.06);border:1px solid rgba(220,245,248,.22)}
-footer{position:absolute;z-index:2;left:0;right:0;bottom:22px;font-size:13px;color:rgba(225,247,250,.7)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
-html:not(.js) .copy>*{opacity:1;transform:none}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ---------- intro ---------- */
+.intro{padding:clamp(40px,5vw,72px) 0 clamp(70px,9vw,140px)}
+.intro p{max-width:64ch;margin:0 0 36px;font-size:clamp(14px,1.05vw,16px);line-height:2;color:var(--ink)}
+
+/* ---------- why: scroll story over a pinned cooling-water circuit ---------- */
+.why{padding-bottom:clamp(40px,6vw,90px)}
+.ws{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,90px)}
+.ws-steps{grid-column:1;grid-row:1;position:relative;padding-left:clamp(34px,3.4vw,52px)}
+.ws-stage{grid-column:2;grid-row:1;--stage-h:min(560px,72vh)}
+.ws-pipe{position:absolute;left:9px;top:var(--p0,0);height:var(--ph,0);width:6px;border-radius:6px;background:#e4f3f6;overflow:hidden}
+.ws-fill{position:absolute;inset:0;border-radius:inherit;transform-origin:top;transform:scaleY(var(--fill,0));background:linear-gradient(#b3eef3,#1fb6cb 50%,#0b7a98)}
+.ws-step{min-height:clamp(300px,64vh,600px);display:flex;flex-direction:column;justify-content:center;position:relative;transition:opacity .6s var(--ease)}
+.ws-step::before{content:"";position:absolute;left:calc(-1 * clamp(34px,3.4vw,52px) + 12px);top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;
+  background:#fff;border:2px solid #cfe9ee;transition:background .5s,border-color .5s,box-shadow .5s,transform .5s var(--ease)}
+.ws-step.past::before{background:linear-gradient(135deg,#b3eef3,#1fb6cb);border-color:#fff;box-shadow:0 0 0 1px #8fd6e1}
+.ws-step.on::before{transform:scale(1.25);box-shadow:0 0 0 1px #8fd6e1,0 0 0 8px rgba(31,182,203,.14)}
+html.js .ws-step:not(.on){opacity:.3}
+.ws-step .n{font-size:clamp(56px,6.4vw,96px);line-height:.9;font-weight:500;background:linear-gradient(135deg,#b3eef3,#5cc4d6 45%,#0b7a98);-webkit-background-clip:text;background-clip:text;color:transparent;
+  transform:translateY(14px);transition:transform .8s var(--ease)}
+.ws-step h3{margin:12px 0 10px;font-size:clamp(22px,2vw,30px);font-weight:500;color:var(--deep)}
+.ws-step p{margin:0;max-width:42ch;color:var(--muted);line-height:1.75}
+.ws-step.on .n{transform:none}
+.ws-card{position:sticky;top:max(88px,calc(50vh - var(--stage-h) / 2 + 30px));height:var(--stage-h);border-radius:28px;overflow:hidden;
+  background:radial-gradient(circle at 1px 1px,rgba(15,127,155,.13) 1px,transparent 0) 0 0/22px 22px,linear-gradient(160deg,#fff,#f1f9fb 60%,#e3f5f8);
+  border:1px solid rgba(143,214,225,.6);box-shadow:0 34px 70px -40px rgba(13,74,94,.5);display:grid;place-items:center;padding:clamp(42px,4vw,60px) clamp(14px,2vw,30px) clamp(14px,2vw,26px)}
+.ws-card svg{width:100%;height:100%;overflow:visible}
+.ws-tag{position:absolute;top:18px;left:22px;display:flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal)}
+.ws-tag b{font-weight:500;color:#fff;background:linear-gradient(110deg,#0d6a83,#1fb6cb);border-radius:99px;padding:3px 10px;letter-spacing:.04em}
+.ws-tag span{animation:capIn .45s var(--ease)}
+/* each benefit has its own scene; only the current one is shown */
+.ws text{fill:var(--teal);stroke:none;font:500 15px Jost,'Century Gothic',system-ui,sans-serif;letter-spacing:.02em}
+.ws text.sm{font-size:13px;font-weight:400;fill:var(--muted)}
+.ws text.big{font-size:24px}
+.ws text.lbl-dk{font-size:17px;font-weight:400;fill:var(--deep)}
+.ws text.warm{fill:#d9733a}
+.ws text.b{font-weight:700;font-size:15px}
+.ws .scene{opacity:0;transform:translateY(18px) scale(.97);transform-origin:320px 235px;transition:opacity .45s var(--ease),transform .7s var(--ease)}
+.ws-card[data-step="0"] .s0,.ws-card[data-step="1"] .s1,.ws-card[data-step="2"] .s2,
+.ws-card[data-step="3"] .s3,.ws-card[data-step="4"] .s4,.ws-card[data-step="5"] .s5{opacity:1;transform:none;transition-delay:.12s}
+.ws .flow,.ws .data{animation:wsFlow 1.1s linear infinite}
+.ws .flow{stroke-dasharray:7 11}
+.ws .data{stroke-dasharray:3 7;animation-duration:1.3s}
+@keyframes wsFlow{to{stroke-dashoffset:-36}}
+.ws .loop{transform-origin:320px 245px;animation:wsSpin 16s linear infinite}
+.ws .rotor{transform-origin:200px 235px;animation:wsSpin 1.3s linear infinite}
+.ws .ring{transform-origin:250px 240px;animation:wsSpin 5s linear infinite}
+@keyframes wsSpin{to{transform:rotate(360deg)}}
+.ws .wave40{animation:wsWave 2.4s linear infinite}
+@keyframes wsWave{to{transform:translateX(-40px)}}
+.ws .pulse{transform-box:fill-box;transform-origin:center;animation:wsPulse 2s ease-out infinite}
+.ws .pulse:nth-of-type(2){animation-delay:.6s}.ws .pulse:nth-of-type(3){animation-delay:1.2s}
+@keyframes wsPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(3);opacity:0}}
+.ws .warn{transform-box:fill-box;transform-origin:center;animation:wsBeat 1.6s ease-in-out infinite}
+@keyframes wsBeat{50%{transform:scale(1.18)}}
+/* entrance moments, replayed each time a scene becomes current */
+.ws .needle{transform-origin:460px 250px;transform:rotate(68deg);transition:transform 1.8s cubic-bezier(.3,.7,.2,1) .35s}
+.ws-card[data-step="1"] .needle{transform:rotate(-58deg)}
+.ws .merc{transform-box:fill-box;transform-origin:bottom;transition:transform 1.6s var(--ease) .4s}
+.ws-card[data-step="3"] .merc{transform:scaleY(.3)}
+.ws .fc{opacity:0;transition:opacity .8s .5s}
+.ws-card[data-step="2"] .fc{opacity:1}
+.ws .rust{opacity:.25;transition:opacity 1s var(--ease) .3s}
+.ws-card[data-step="4"] .rust{opacity:1}
+.ws .shield{transform-box:fill-box;transform-origin:center;transform:scale(.6);opacity:0;transition:transform .7s cubic-bezier(.3,1.5,.5,1) .45s,opacity .4s .45s}
+.ws-card[data-step="4"] .shield{transform:none;opacity:1}
+.ws .life{transform-box:fill-box;transform-origin:left;transform:scaleX(0);transition:transform 1.3s var(--ease) calc(.6s + var(--d,0s))}
+.ws-card[data-step="4"] .life{transform:none}
+.ws .tick,.ws .chart{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .8s var(--ease) var(--d,0s)}
+.ws .chart{transition-duration:1.3s;--d:.7s}
+.ws .chart-h{opacity:0;transition:opacity .3s 1.9s}
+.ws-card[data-step="4"] .tick,.ws-card[data-step="5"] .tick,.ws-card[data-step="5"] .chart{stroke-dashoffset:0}
+.ws-card[data-step="5"] .chart-h{opacity:1}
+.ws .bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(.05);transition:transform .9s var(--ease) var(--d)}
+.ws-card[data-step="5"] .bar{transform:none}
+.ws:not(.live) *{animation-play-state:paused!important}
+@media (max-width:900px){
+  .ws{display:flex;flex-direction:column}
+  .ws-stage{order:-1;position:sticky;top:66px;z-index:2;height:auto;background:linear-gradient(#fff 88%,rgba(255,255,255,0));padding:8px 0 22px;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad)}
+  .ws-card{position:relative;top:auto;height:auto}
+  .ws-card svg{height:auto}
+  .ws-step{min-height:46vh}
+}
+/* phones held sideways: card and steps side by side again, sized to the short screen */
+@media (max-width:900px) and (orientation:landscape) and (max-height:600px){
+  .ws{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+  .ws-stage{order:0;position:static;background:none;padding:0;margin:0}
+  .ws-card{position:sticky;top:78px;height:calc(100svh - 96px);padding:40px 12px 10px}
+  .ws-card svg{height:100%}
+  .ws-step{min-height:80svh}
+  .ws-step .n{font-size:44px}
+}
+
+/* ---------- industries ---------- */
+.ind{padding-bottom:clamp(70px,9vw,140px)}
+/* coverflow: the centre card faces you, its neighbours rake back into depth (positions painted from JS) */
+.cf{--cf-card:clamp(200px,24vw,300px);position:relative;margin-inline:calc(var(--pad)*-1)}
+.cf-frame{overflow:hidden;padding:44px 0 52px;perspective:calc(var(--cf-card)*3);touch-action:pan-y;cursor:grab;outline:none;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.cf-frame:active{cursor:grabbing}
+.cf-frame:focus-visible .cf-card.on{outline:2px solid var(--teal-2);outline-offset:4px}
+.cf-track{position:relative;height:var(--cf-card);transform-style:preserve-3d;user-select:none;-webkit-user-select:none;list-style:none;margin:0;padding:0}
+.cf-card{position:absolute;left:50%;top:0;width:var(--cf-card);aspect-ratio:1;border-radius:24px;will-change:transform,opacity;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,1.6vw,22px);padding:24px;text-align:center;color:var(--teal);
+  background:linear-gradient(160deg,#fff 0%,#f3fbfc 55%,#e3f5f8 100%);border:1px solid rgba(143,214,225,.6);
+  box-shadow:0 26px 50px -24px rgba(13,74,94,.42),0 2px 6px rgba(13,74,94,.06);transition:box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.cf-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:linear-gradient(135deg,#b3eef3,#5cc4d6 50%,#0b7a98);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s var(--ease)}
+.cf-card.on{box-shadow:0 34px 64px -26px rgba(15,127,155,.6),0 2px 8px rgba(13,74,94,.08);border-color:transparent}
+.cf-card.on::before{opacity:1}
+.cf-card .ind-ico{width:46%;height:auto;aspect-ratio:1;overflow:visible;pointer-events:none}
+.cf-card .ind-ico *{vector-effect:none}
+.cf-card h3{margin:0;font-weight:400;font-size:clamp(15px,1.3vw,19px);line-height:1.25;max-width:16ch}
+/* line-draw: hidden until the section scrolls in, then redrawn every time a card arrives at the centre */
+.cf .ind-ico path,.cf .ind-ico rect,.cf .ind-ico circle{stroke-dasharray:var(--len)}
+.cf:not(.in) .ind-ico path,.cf:not(.in) .ind-ico rect,.cf:not(.in) .ind-ico circle{stroke-dashoffset:var(--len)}
+.cf-card.play .ind-ico path,.cf-card.play .ind-ico rect,.cf-card.play .ind-ico circle{animation:redraw 1.6s var(--ease) backwards}
+/* steel & metal is one long continuous path (the others are several short ones), so it needs more time to draw at the same pace */
+.cf-card.play .ind-steel-metal path{animation:redraw 3.4s cubic-bezier(.45,.1,.35,1) backwards}
+@keyframes redraw{0%{stroke-dashoffset:var(--len)}100%{stroke-dashoffset:0}}
+.cf-ctrl{display:flex;align-items:center;justify-content:center;gap:clamp(16px,2vw,28px);margin-top:22px}
+.cf-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:#fff;color:var(--teal);border:1px solid rgba(143,214,225,.8);box-shadow:0 8px 22px -12px rgba(13,74,94,.45);
+  transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.cf-btn:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:scale(1.06)}
+.cf-btn svg{width:20px;height:20px}
+.cf-cap{text-align:center;max-width:54ch;margin:0 auto;padding-inline:var(--pad);min-height:3.4em;color:var(--muted);font-size:clamp(15px,1.15vw,17px)}
+.cf-cap p{margin:0;animation:capIn .45s var(--ease)}
+@keyframes capIn{from{opacity:0;transform:translateY(6px)}}
+.cf-more{color:var(--teal);font-weight:500;white-space:nowrap;border-bottom:1px solid currentColor}
+.cf-more:hover{color:var(--deep)}
+.cf-dots{display:flex;justify-content:center;gap:10px}
+.cf-dots button{width:8px;height:8px;border-radius:99px;background:var(--teal);opacity:.25;padding:0;transition:width .4s var(--ease),opacity .3s}
+.cf-dots button[aria-current="true"]{width:26px;opacity:1}
+@media (max-width:600px){.cf{--cf-card:min(62vw,240px)}.cf-btn{width:38px;height:38px}}
+.wide-cta{display:flex;justify-content:center;margin-top:clamp(48px,6vw,90px)}
+.wide-cta .btn{width:min(100%,1200px);justify-content:center;padding:16px}
+
+/* ---------- problems ---------- */
+.prob{padding-bottom:clamp(60px,7vw,110px)}
+.prob h2{margin-bottom:12px}
+.sub{margin:0 0 clamp(28px,3.4vw,48px);color:var(--teal);font-size:clamp(15px,1.25vw,19px)}
+.cards{display:flex;gap:clamp(6px,.7vw,12px);height:clamp(360px,36vw,600px)}
+.pcard{flex:1 1 0;min-width:0;position:relative;overflow:hidden;border-radius:4px;background:linear-gradient(180deg,#dcdcdc,#cfd3d5);color:#fff;transition:flex-grow .7s var(--ease);outline:none;cursor:pointer}
+.pcard img{position:absolute;left:50%;top:36%;width:42%;translate:-50% -50%;opacity:.35;filter:grayscale(.2);transition:.7s var(--ease)}
+.pcard::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(180deg,rgba(13,74,94,0),rgba(13,74,94,.82) 55%,#0d4a5e);transition:height .7s var(--ease)}
+.pcard .lbl{position:absolute;inset:auto 0 0;z-index:2;padding:18px 14px 22px;text-align:center}
+.pcard h3{margin:0;font-weight:400;font-size:clamp(12px,.95vw,15px);line-height:1.35}
+.pcard p{margin:0 auto;max-width:30ch;font-size:13.5px;line-height:1.6;color:#d8f2f5;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .4s,margin .5s}
+.pcard:hover,.pcard:focus-visible,.pcard.on{flex-grow:2.4}
+.pcard:hover::after,.pcard:focus-visible::after,.pcard.on::after{height:62%}
+.pcard:hover p,.pcard:focus-visible p,.pcard.on p{max-height:140px;opacity:1;margin-top:10px}
+.pcard:hover img,.pcard.on img{opacity:.55;top:30%;width:34%}
+/* real photos fill the whole card; the teal gradient underneath keeps the caption readable */
+.pcard img.photo{left:0;top:0;width:100%;height:100%;translate:none;object-fit:cover;object-position:50% 40%;opacity:1;filter:saturate(.85);transform:scale(1.04);transition:transform 1.2s var(--ease),filter .7s}
+.pcard:hover img.photo,.pcard.on img.photo{top:0;width:100%;opacity:1;filter:none;transform:none}
+.pcard:has(.photo)::after{height:40%;background:linear-gradient(180deg,rgba(13,74,94,0),rgba(13,74,94,.7) 50%,rgba(10,58,74,.94))}
+.pcard:has(.photo):hover::after,.pcard:has(.photo).on::after{height:46%}
+@media (max-width:820px){
+  .cards{flex-direction:column;height:auto}
+  .pcard img.photo{width:100%;top:0}
+  .pcard{height:110px;flex:none;transition:height .6s var(--ease)}
+  .pcard.on,.pcard:hover{height:230px}
+  .pcard img{width:70px;top:40%}
+}
+
+/* ---------- modules + laptop ---------- */
+.mods{padding-bottom:0}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,1.2vw,18px);margin-bottom:clamp(30px,3.5vw,54px)}
+.tab{height:clamp(52px,4.6vw,70px);border:1.5px solid var(--line);border-radius:999px;color:var(--teal);font-size:clamp(12px,.98vw,15px);padding:0 10px;transition:.35s var(--ease);position:relative}
+.tab:hover{background:var(--soft)}
+.tab[aria-selected=true]{background:var(--deep);border-color:var(--deep);color:#fff;box-shadow:0 10px 26px rgba(13,74,94,.22)}
+@media (max-width:820px){.tabs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scrollbar-width:none}.tab{flex:0 0 auto;padding:0 20px;scroll-snap-align:start}.tabs::-webkit-scrollbar{display:none}}
+.mods{padding-bottom:0}
+.stagebox{position:relative;perspective:1600px;padding-top:10px}
+.laptop{width:min(100%,1060px);margin:0 auto}
+@media (max-width:900px) and (orientation:landscape) and (max-height:600px){.laptop{width:min(100%,calc((100svh - 90px) * 1.183))}}
+
 </style>
 </head>
 <body>
-<main class="page">
-  <canvas id="net" aria-hidden="true"></canvas>
-  <div class="logo" aria-label="SMAYAA.ai" role="img"><svg id="opener" viewBox="30 120 1340 1180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SMAYAA.ai">
+<a class="sr-only" href="#main">Skip to content</a>
+
+<div id="loader" aria-hidden="true"><span class="skip">Click to skip</span></div>
+<div id="stage" aria-hidden="true"><svg id="opener" viewBox="30 120 1340 1180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SMAYAA.ai">
         <defs>
           <linearGradient id="gTeal" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="850" y2="0">
             <stop offset="0" stop-color="#34b3c8"/><stop offset="1" stop-color="#009db6"/>
@@ -97,283 +259,271 @@ html:not(.js) .copy>*{opacity:1;transform:none}
           <text x="700" y="768" text-anchor="middle" font-family="'Century Gothic', Jost, Futura, sans-serif" font-size="166" font-weight="700"><tspan fill="#0d4f66" letter-spacing="40">SMAYAA.</tspan><tspan fill="#1fb6cb" letter-spacing="6">ai</tspan></text>
         </g>
       </svg></div>
-  <div class="copy">
-    <h1 class="sr-only">SMAYAA.ai – AI-powered cooling water optimization for industries. Coming soon.</h1>
-    <span class="badge"><i aria-hidden="true"></i>Coming soon</span>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="SMAYAA.ai home">
+      <span id="brandSlot"></span>
+      <img class="brand-static" src="data:image/svg+xml;base64,PHN2ZyBpZD0ib3BlbmVyIiB2aWV3Qm94PSItNy40IDQ5NC43IDE0MTQuOSA0MjYuNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNNQVlBQS5haSBsb2dvIj4NCiAgICAgICAgPGRlZnM+DQogICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnVGVhbCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxNTAiIHkxPSIwIiB4Mj0iODUwIiB5Mj0iMCI+DQogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzNGIzYzgiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDlkYjYiPjwvc3RvcD4NCiAgICAgICAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ0RhcmsiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTUwIiB5MT0iMCIgeDI9IjUwMCIgeTI9IjAiPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDA2ZDg4Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGE4OGE0Ij48L3N0b3A+DQogICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgICA8IS0tIHBhbGUgY3lhbiBhdCB0aGUgdG9wIGxlZnQsIGRlZXBlbmluZyB0byBibHVlLXRlYWwgYXQgdGhlIGJvdHRvbSByaWdodCAtLT4NCiAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdSaW5nIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMwMCIgeTE9IjMwOCIgeDI9IjExMDAiIHkyPSIxMTA4Ij4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2IzZWVmMyI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjNWNjNGQ2Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGI3YTk4Ij48L3N0b3A+DQogICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgICA8Y2xpcFBhdGggaWQ9ImNsaXBVIj48cGF0aCBpZD0iY2xpcFVQYXRoIiBkPSJNMTM1IDcwOCBBNTY1IDU2NSAwIDAgMSAxMjY1IDcwOCBBNTY1IDU2NSAwIDAgMCAxMzUgNzA4IFoiPjwvcGF0aD48L2NsaXBQYXRoPg0KICAgICAgICAgIDxjbGlwUGF0aCBpZD0iY2xpcEwiPjxwYXRoIGlkPSJjbGlwTFBhdGgiIGQ9Ik0xMzUgNzA4IEE1NjUgNTY1IDAgMCAwIDEyNjUgNzA4IEE1NjUgNTY1IDAgMCAxIDEzNSA3MDggWiI+PC9wYXRoPjwvY2xpcFBhdGg+DQogICAgICAgICAgPG1hc2sgaWQ9InJpbmdNYXNrIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDQwIj4NCiAgICAgICAgICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0NDAiIGZpbGw9IiNmZmYiPjwvcmVjdD4NCiAgICAgICAgICAgIDxyZWN0IGlkPSJnYXAiIHg9IjcwMCIgeT0iMzIyLjc3OTA2MTkxNjE3MTgiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc3MC40NDE4NzYxNjc2NTYzIiBmaWxsPSIjMDAwIj48L3JlY3Q+PHJlY3QgaWQ9ImdhcEwiIHg9IjAiIHk9IjcwOCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSIwIiBmaWxsPSIjMDAwIj48L3JlY3Q+DQogICAgICAgICAgPC9tYXNrPg0KICAgICAgICAgIDxnIGlkPSJzaGFkZSI+DQogICAgICAgICAgICA8Y2lyY2xlIGN4PSI3MDAiIGN5PSI3MDgiIHI9IjU3MiIgZmlsbD0iIzc1ZDhlMCI+PC9jaXJjbGU+DQogICAgICAgICAgICA8ZyBpZD0ic2hhZGVTaGlmdCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTk1IDApIj4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9IndhdmVBIiBmaWxsPSJ1cmwoI2dUZWFsKSIgZD0iTS0zMDAgMCBMMTcwMCAwIEwxNzAwIDQyNSBMMTE4MCA0MjUgQzEwMDAgMzk1IDkwMCAzODUgODMwIDM5MiBDNzAwIDQxMCA2NDAgNDkwIDYxNSA1ODAgQzU5NSA2NjAgNTg1IDc2MCA1NjAgODYwIEM1MzAgOTcwIDQ1MCAxMDI4IDMyMCAxMDI2IEwtMzAwIDEwMjIgWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0LjQgMCkiPjwvcGF0aD4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9IndhdmVCIiBmaWxsPSJ1cmwoI2dEYXJrKSIgZD0iTS0zMDAgMCBMNDk3IDAgQzQ4OCAyNjAgNDkyIDQwMCA0OTAgNDcwIEM0ODggNTYwIDQzMCA2MjAgMzYwIDY2NSBDMzAwIDcwMCAyMDAgNzIyIC0zMDAgNzMwIFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02LjQgMCkiPjwvcGF0aD4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9ImRhcmtlc3QiIGZpbGw9IiMwMDU4NmUiIGQ9Ik0tMzAwIDAgTDM0NSAwIEMzNDAgMjIwIDI5MCAzMjAgMTYwIDMzNSBMLTMwMCAzMzUgWiIgb3BhY2l0eT0iMCI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICAgIDwvZz4NCiAgICAgICAgPC9kZWZzPg0KICAgICAgICA8ZyBpZD0ic3BoZXJlIiBvcGFjaXR5PSIwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MDAgNzA4KSBzY2FsZSgxKSB0cmFuc2xhdGUoLTcwMCAtNzA4KSI+DQogICAgICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXBVKSI+PHVzZSBocmVmPSIjc2hhZGUiPjwvdXNlPjwvZz4NCiAgICAgICAgICA8ZyBjbGlwLXBhdGg9InVybCgjY2xpcEwpIj48dXNlIGhyZWY9IiNzaGFkZSI+PC91c2U+PC9nPg0KICAgICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgIDxjaXJjbGUgaWQ9Im91dGxpbmUiIGN4PSI3MDAiIGN5PSI3MDgiIHI9IjU2NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjBlZGYwIiBzdHJva2Utd2lkdGg9IjQwIiBvcGFjaXR5PSIwIj48L2NpcmNsZT4NCiAgICAgICAgPC9nPg0KICAgICAgICA8Y2lyY2xlIGlkPSJyaW5nIiBjeD0iNzAwIiBjeT0iNzA4IiByPSI1NjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnUmluZykiIHN0cm9rZS13aWR0aD0iOTUuNTM0NzkyNjQ0Nzg5MzkiIG1hc2s9InVybCgjcmluZ01hc2spIiBvcGFjaXR5PSIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDUuOTA4NTQxODcwMTE3MTggNzA4KSBzY2FsZSgwLjMyNDQ4OTExMTY4MTY2NzQpIHRyYW5zbGF0ZSgtNzAwIC03MDgpIj48L2NpcmNsZT4NCiAgICAgICAgPGcgaWQ9IndvcmRXcmFwIiBvcGFjaXR5PSIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NzIuNDE3ODU3NDk5NTU2IDcwOCkgc2NhbGUoMSkgdHJhbnNsYXRlKC03MDAgLTcwOCkiPg0KICAgICAgICAgIDx0ZXh0IHg9IjcwMCIgeT0iNzY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0NlbnR1cnkgR290aGljJywgSm9zdCwgRnV0dXJhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2NiIgZm9udC13ZWlnaHQ9IjcwMCI+PHRzcGFuIGZpbGw9IiMwZDRmNjYiIGxldHRlci1zcGFjaW5nPSI0MCI+U01BWUFBLjwvdHNwYW4+PHRzcGFuIGZpbGw9IiMxZmI2Y2IiIGxldHRlci1zcGFjaW5nPSI2Ij5haTwvdHNwYW4+PC90ZXh0Pg0KICAgICAgICA8L2c+DQogICAgICA8L3N2Zz4=" alt="SMAYAA.ai" width="140" height="42">
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="about" data-nav="about">About</a>
+      <a href="applications" data-nav="applications">Applications</a>
+      <a href="modules" data-nav="modules">Intelligence Modules</a>
+      <div class="dd" id="dd">
+        <button aria-expanded="false" aria-haspopup="true">How It Works <svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        <div class="dd-menu">
+          <a href="how-it-works" data-nav="how-it-works">How SMAYAA Works</a>
+          <a href="case-studies" data-nav="case-studies">Case Studies</a>
+        </div>
+      </div>
+      <a class="pill" href="book-a-demo" data-nav="book-a-demo" data-demo>Book a Demo</a>
+    </nav>
   </div>
-  <footer>© 2026 SMAYAA.ai</footer>
+</header>
+
+<main id="main">
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <h1 id="hero-title"><span class="w"><span style="transition-delay:0.00s">An</span></span> <span class="w"><span style="transition-delay:0.04s">advanced,</span></span> <span class="w"><span style="transition-delay:0.08s">AI-powered</span></span> <span class="w"><span style="transition-delay:0.12s">industrial</span></span> <span class="w"><span style="transition-delay:0.16s">water</span></span> <span class="w"><span style="transition-delay:0.20s">intelligence</span></span> <span class="w"><span style="transition-delay:0.24s">platform</span></span> <span class="w"><span style="transition-delay:0.28s">that</span></span> <span class="w"><span style="transition-delay:0.32s">uses</span></span> <span class="w"><span style="transition-delay:0.41s"><span class="rot" id="heroRot"><span class="rw on">Machine Learning</span><span class="rw" aria-hidden="true">Predictive Analytics</span><span class="rw" aria-hidden="true">Engineering Intelligence</span></span></span></span></h1>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <section class="intro" aria-label="About SMAYAA">
+    <div class="wrap rv">
+      <p>Designed For Industries With High Freshwater Consumption, SMAYAA Helps Reduce Water Consumption, Reduce/Eliminate Water Related Production Issues For Critical Industries, Improve Cooling Efficiency, Optimize Water Reuse And Recycling, And Minimize Operating Costs Through Intelligent Performance Monitoring And Data-Driven Recommendations.</p>
+      <a class="btn" href="#problems">See how it works <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <h2 id="why-title" class="rv">Why SMAYAA</h2>
+      <div class="ws" id="ws">
+        <div class="ws-steps">
+          <div class="ws-pipe" aria-hidden="true"><span class="ws-fill"></span></div>
+          <article class="ws-step on past" data-tag="Make-up &amp; blowdown"><div class="n" aria-hidden="true">01</div><h3>Water Savings</h3><p>Cut make-up water and blowdown by running cooling circuits at the highest safe cycles of concentration.</p></article>
+          <article class="ws-step" data-tag="Fans &amp; pumps"><div class="n" aria-hidden="true">02</div><h3>Energy Optimisation</h3><p>Find the pump, fan and chiller settings that hold your process temperatures with the least power.</p></article>
+          <article class="ws-step" data-tag="Sensors to models"><div class="n" aria-hidden="true">03</div><h3>Predictive Intelligence</h3><p>Machine-learning models trained on your plant data flag scaling, corrosion and fouling risk before it reaches production.</p></article>
+          <article class="ws-step" data-tag="Return-water temperature"><div class="n" aria-hidden="true">04</div><h3>Cooling Efficiency</h3><p>Keep heat-transfer surfaces clean and approach temperatures tight, so towers and exchangers deliver their design duty.</p></article>
+          <article class="ws-step" data-tag="Exchanger health"><div class="n" aria-hidden="true">05</div><h3>Asset Protection</h3><p>Track corrosion and deposit risk on exchangers, piping and fill to extend equipment life.</p></article>
+          <article class="ws-step" data-tag="Running cost"><div class="n" aria-hidden="true">06</div><h3>Operational Savings</h3><p>Turn recommendations into fewer shutdowns, lower chemical spend and less manual testing.</p></article>
+        </div>
+        <div class="ws-stage">
+          <div class="ws-card" data-step="0">
+            <div class="ws-tag" aria-hidden="true"><b id="wsNum">01 / 06</b><span id="wsTag">Make-up &amp; blowdown</span></div>
+            <svg viewBox="0 0 640 470" role="img" aria-label="Illustration of the selected SMAYAA benefit">
+            <defs>
+              <linearGradient id="wsG" gradientUnits="userSpaceOnUse" x1="40" y1="40" x2="600" y2="440"><stop offset="0" stop-color="#8fe0ea"/><stop offset=".5" stop-color="#2fb0c6"/><stop offset="1" stop-color="#0b7a98"/></linearGradient>
+              <linearGradient id="wsTemp" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="490" y2="0"><stop offset="0" stop-color="#ef8a4c"/><stop offset=".45" stop-color="#f5b47c"/><stop offset="1" stop-color="#2fb0c6"/></linearGradient>
+              <clipPath id="wsDropClip"><path d="M320 128 C282 182 252 214 252 254 a68 68 0 0 0 136 0 C388 214 358 182 320 128 Z"/></clipPath>
+              <clipPath id="wsBore"><circle cx="460" cy="210" r="77"/></clipPath>
+              <path id="wsBlade" d="M200 235 C212 196 246 168 282 176 C270 210 236 232 200 235 Z"/>
+            </defs>
+            <g fill="none" stroke="url(#wsG)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <!-- 01 water savings: the same water goes round more times -->
+              <g class="scene s0">
+                <g class="loop"><path d="M179 194 A150 150 0 0 1 461 194 M451 187 L461 194 L464 182 M461 296 A150 150 0 0 1 179 296 M189 303 L179 296 L176 308" stroke-width="2.6"/></g>
+                <g clip-path="url(#wsDropClip)"><path class="wave40" d="M190 262 q10 -7 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0  V340 H190 Z" fill="rgba(31,182,203,.16)" stroke="none"/><path class="wave40" d="M190 262 q10 -7 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 " stroke-width="2"/></g>
+                <path d="M320 128 C282 182 252 214 252 254 a68 68 0 0 0 136 0 C388 214 358 182 320 128 Z" stroke-width="3"/>
+                <text x="320" y="300" text-anchor="middle" class="big">Reuse ↑</text>
+                <text x="320" y="436" text-anchor="middle">Higher cycles of concentration · less make-up &amp; blowdown</text>
+              </g>
+              <!-- 02 energy: fans and pumps, power coming down -->
+              <g class="scene s1">
+                <circle cx="200" cy="235" r="102"/><circle cx="200" cy="235" r="92" stroke-width="1.2" opacity=".5"/>
+                <g class="rotor"><use href="#wsBlade"/><use href="#wsBlade" transform="rotate(90 200 235)"/><use href="#wsBlade" transform="rotate(180 200 235)"/><use href="#wsBlade" transform="rotate(270 200 235)"/></g>
+                <circle cx="200" cy="235" r="14" fill="#fff"/>
+                <text x="200" y="376" text-anchor="middle">Tower fans &amp; pumps</text>
+                <path d="M382 295 A90 90 0 1 1 538 295" stroke-width="3"/>
+                <path d="M538 205 A90 90 0 0 1 538 295" stroke="#ef8a4c" stroke-width="5"/>
+                <path d="M382 295 A90 90 0 0 1 382 205" stroke-width="5"/>
+                <path d="M394.2 288.0 L383.8 294.0 M384.0 250.0 L372.0 250.0 M394.2 212.0 L383.8 206.0 M422.0 184.2 L416.0 173.8 M460.0 174.0 L460.0 162.0 M498.0 184.2 L504.0 173.8 M525.8 212.0 L536.2 206.0 M536.0 250.0 L548.0 250.0 M525.8 288.0 L536.2 294.0" stroke-width="1.6" opacity=".7"/>
+                <g class="needle"><path d="M460 250 V182" stroke-width="3.4"/></g>
+                <circle cx="460" cy="250" r="9" fill="#fff"/>
+                <text x="460" y="304" text-anchor="middle" class="big">kW</text>
+                <text x="460" y="376" text-anchor="middle">Power drawn</text>
+              </g>
+              <!-- 03 predictive: sensors feed the model, which forecasts risk before it happens -->
+              <g class="scene s2">
+                <path class="data" d="M88 150 Q170 150 216 222 M88 240 H212 M88 330 Q170 330 216 258" stroke-width="1.8"/>
+                <circle class="pulse" cx="80" cy="150" r="7"/><circle class="pulse" cx="80" cy="240" r="7"/><circle class="pulse" cx="80" cy="330" r="7"/>
+                <g fill="#fff"><circle cx="80" cy="150" r="7"/><circle cx="80" cy="240" r="7"/><circle cx="80" cy="330" r="7"/></g>
+                <text x="80" y="128" text-anchor="middle" class="sm">pH</text><text x="80" y="218" text-anchor="middle" class="sm">Conductivity</text><text x="80" y="308" text-anchor="middle" class="sm">Temperature</text>
+                <g class="ring"><path d="M250 202 a38 38 0 1 1 -36.6 28" stroke-width="4"/></g><circle cx="250" cy="240" r="6"/>
+                <text x="250" y="304" text-anchor="middle" class="sm">SMAYAA</text>
+                <path class="flow" d="M292 240 H330" stroke-width="3"/>
+                <path d="M340 360 H604 M340 120 V360" stroke-width="1.6" opacity=".6"/>
+                <path d="M340 214 H604" stroke="#ef8a4c" stroke-width="1.6" stroke-dasharray="4 6"/>
+                <text x="348" y="204" class="sm warm">Scaling risk</text>
+                <path d="M470 130 V360" stroke-width="1.2" stroke-dasharray="2 5" opacity=".7"/>
+                <path d="M350 320 L380 306 L410 314 L440 292 L470 284" stroke-width="3"/>
+                <path class="fc" d="M470 284 L500 258 L530 232 L556 208" stroke-width="3" stroke-dasharray="7 7"/>
+                <circle class="warn" cx="556" cy="208" r="12" fill="#fff" stroke="#ef8a4c" stroke-width="2.4"/><text x="556" y="214" text-anchor="middle" class="warm b">!</text>
+                <text x="470" y="382" text-anchor="middle" class="sm">Now</text><text x="540" y="382" text-anchor="middle" class="sm">Forecast</text>
+                <text x="320" y="440" text-anchor="middle">Spot scaling, corrosion &amp; fouling before they happen</text>
+              </g>
+              <!-- 04 cooling efficiency: hot in, cool out through a clean exchanger -->
+              <g class="scene s3">
+                <path d="M30 215 H150" stroke="#ef8a4c" stroke-width="12" opacity=".18"/><path class="flow" d="M30 215 H150" stroke="#ef8a4c" stroke-width="3"/>
+                <path d="M490 265 H610" stroke-width="12" opacity=".18"/><path class="flow" d="M490 265 H610" stroke-width="3"/>
+                <rect x="150" y="185" width="340" height="110" rx="55" stroke-width="3"/>
+                <path class="flow" d="M190 215 H450 M175 240 H465 M190 265 H450" stroke="url(#wsTemp)" stroke-width="3"/>
+                <path d="M54 72 V136 a11 11 0 1 0 12 0 V72 a6 6 0 0 0 -12 0 z" stroke-width="2"/><path d="M60 146 V84" stroke="#ef8a4c" stroke-width="4"/>
+                <path d="M574 72 V136 a11 11 0 1 0 12 0 V72 a6 6 0 0 0 -12 0 z" stroke-width="2"/><path class="merc" d="M580 146 V84" stroke-width="4"/>
+                <text x="100" y="196" text-anchor="middle" class="warm">Hot in</text>
+                <text x="548" y="248" text-anchor="middle">Cooled out</text>
+                <text x="320" y="370" text-anchor="middle">Clean surfaces · tight approach temperature</text>
+              </g>
+              <!-- 05 asset protection: a pipe left to corrode next to one SMAYAA has kept clean -->
+              <g class="scene s4">
+                <text x="180" y="92" text-anchor="middle" class="sm warm">Without early warning</text>
+                <circle cx="180" cy="210" r="94" stroke-width="3"/><circle cx="180" cy="210" r="78" stroke-width="1.6"/>
+                <path class="rust" d="M102 210 a78 78 0 1 0 156 0 a78 78 0 1 0 -156 0 Z M229.7 210.0 L235.0 217.2 L239.7 226.0 L229.6 230.5 L223.9 235.4 L214.8 236.7 L208.2 238.2 L207.4 245.7 L201.2 246.7 L196.6 250.2 L189.1 244.1 L184.0 240.0 L180.0 242.0 L174.8 249.7 L168.9 251.4 L160.4 257.3 L151.4 259.6 L144.8 255.9 L143.8 246.2 L141.9 239.2 L133.0 237.1 L134.2 229.0 L125.6 224.6 L133.2 216.2 L141.9 210.0 L149.6 206.0 L151.2 202.3 L145.4 195.7 L146.2 190.5 L142.2 181.0 L144.9 174.9 L152.0 173.5 L156.9 169.9 L163.0 168.9 L167.1 161.9 L172.7 154.4 L180.0 149.1 L187.0 156.5 L191.5 166.9 L195.0 173.7 L197.7 179.4 L202.0 181.4 L210.9 179.1 L215.5 182.8 L214.2 190.2 L216.4 194.9 L217.4 200.0 L225.7 204.0 Z" fill="#e2a06d" fill-rule="evenodd" stroke="none"/>
+                <g class="rust" fill="#b8643a" stroke="none"><circle cx="241.1" cy="228.9" r="3.5"/><circle cx="189.9" cy="267.2" r="2.5"/><circle cx="140.0" cy="265.0" r="3"/><circle cx="120.1" cy="212.5" r="4"/><circle cx="136.9" cy="160.1" r="2.5"/><circle cx="190.6" cy="154.0" r="3"/><circle cx="234.3" cy="165.8" r="2.5"/></g>
+                <path d="M229.7 210.0 L235.0 217.2 L239.7 226.0 L229.6 230.5 L223.9 235.4 L214.8 236.7 L208.2 238.2 L207.4 245.7 L201.2 246.7 L196.6 250.2 L189.1 244.1 L184.0 240.0 L180.0 242.0 L174.8 249.7 L168.9 251.4 L160.4 257.3 L151.4 259.6 L144.8 255.9 L143.8 246.2 L141.9 239.2 L133.0 237.1 L134.2 229.0 L125.6 224.6 L133.2 216.2 L141.9 210.0 L149.6 206.0 L151.2 202.3 L145.4 195.7 L146.2 190.5 L142.2 181.0 L144.9 174.9 L152.0 173.5 L156.9 169.9 L163.0 168.9 L167.1 161.9 L172.7 154.4 L180.0 149.1 L187.0 156.5 L191.5 166.9 L195.0 173.7 L197.7 179.4 L202.0 181.4 L210.9 179.1 L215.5 182.8 L214.2 190.2 L216.4 194.9 L217.4 200.0 L225.7 204.0 Z" fill="rgba(31,182,203,.10)" stroke="#d9733a" stroke-width="1.4"/>
+                <text x="180" y="334" text-anchor="middle" class="sm">Corrosion · scale · pitting</text>
+
+                <path class="flow" d="M296 210 H344" stroke-width="3"/><path d="M336 202 l10 8 l-10 8" stroke-width="2.6"/>
+
+                <text x="460" y="92" text-anchor="middle" class="sm">With SMAYAA</text>
+                <circle cx="460" cy="210" r="94" stroke-width="3"/><circle cx="460" cy="210" r="78" stroke-width="1.6"/>
+                <circle cx="460" cy="210" r="77" fill="rgba(31,182,203,.14)" stroke="none"/>
+                <g clip-path="url(#wsBore)"><path class="wave40" d="M380 214 q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" stroke-width="1.6" opacity=".6"/></g>
+                <g transform="translate(14 -40)"><g class="shield">
+                  <path d="M530 236 L566 248 V276 Q566 306 530 322 Q494 306 494 276 V248 Z" fill="#fff" stroke-width="2.8"/>
+                  <path class="tick" style="--d:.7s" pathLength="1" d="M514 280 l11 11 l21 -23" stroke-width="3.2"/>
+                </g></g>
+                <text x="460" y="334" text-anchor="middle" class="sm">Clean bore · wall intact</text>
+
+                <text x="70" y="384" class="sm">Equipment life</text>
+                <path d="M70 402 H500 M70 428 H500" stroke="#e4f3f6" stroke-width="10"/>
+                <path class="life" d="M70 402 H290" stroke="#ef8a4c" stroke-width="10"/>
+                <path class="life" style="--d:.5s" d="M70 428 H500" stroke-width="10"/>
+                <text x="510" y="433" class="sm">With SMAYAA</text>
+                <text x="300" y="407" class="sm warm">Before</text>
+              </g>
+              <!-- 06 operational savings -->
+              <g class="scene s5">
+                <path d="M70 350 H340 M70 130 V350" stroke-width="1.6" opacity=".6"/>
+                <g fill="rgba(31,182,203,.14)"><rect class="bar" style="--d:0.00s" x="90" y="160" width="28" height="190" rx="4"/><rect class="bar" style="--d:0.12s" x="140" y="190" width="28" height="160" rx="4"/><rect class="bar" style="--d:0.24s" x="190" y="212" width="28" height="138" rx="4"/><rect class="bar" style="--d:0.36s" x="240" y="242" width="28" height="108" rx="4"/><rect class="bar" style="--d:0.48s" x="290" y="272" width="28" height="78" rx="4"/></g>
+                <path class="chart" pathLength="1" d="M94 146 L154 178 L204 198 L254 230 L310 262" stroke-width="3"/><path class="chart-h" d="M310 262 l-12 -1 M310 262 l-4 -11" stroke-width="3"/>
+                <text x="205" y="380" text-anchor="middle">Running cost</text>
+                <circle cx="400" cy="170" r="16"/><path class="tick" style="--d:0.50s" pathLength="1" d="M392 170 l6 6 l12 -12" stroke-width="2.8"/><text x="432" y="176" class="lbl-dk">Fewer shutdowns</text><circle cx="400" cy="240" r="16"/><path class="tick" style="--d:0.85s" pathLength="1" d="M392 240 l6 6 l12 -12" stroke-width="2.8"/><text x="432" y="246" class="lbl-dk">Lower chemical spend</text><circle cx="400" cy="310" r="16"/><path class="tick" style="--d:1.20s" pathLength="1" d="M392 310 l6 6 l12 -12" stroke-width="2.8"/><text x="432" y="316" class="lbl-dk">Less manual testing</text>
+              </g>
+            </g>
+          </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ind cv" id="applications" aria-labelledby="ind-title">
+    <div class="wrap">
+      <h2 id="ind-title" class="rv">Who Will Benefit From SMAYAA</h2>
+      <div class="cf" id="indCf" role="region" aria-roledescription="carousel" aria-label="Industries that benefit from SMAYAA">
+        <div class="cf-frame" tabindex="0" aria-describedby="cfCap">
+          <ul class="cf-track">
+            <li class="cf-card" data-href="applications#steel-metal" data-desc="Keep blast-furnace, caster and rolling-mill cooling circuits clean while recycling more water."><svg class="ind-ico ind-steel-metal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-steel-metal-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-steel-metal-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M5.00 22.27 L22.27 22.27 L22.27 26.07 L16.40 26.07 L16.40 34.02 L22.27 34.02 L22.27 37.82 L5.00 37.82 L5.00 34.02 L10.87 34.02 L10.87 26.07 L5.00 26.07 Z M5.00 22.27 L25.73 10.18 L43.00 10.18 L22.27 22.27 M43.00 10.18 L43.00 13.98 L22.27 26.07 M16.40 34.02 L37.13 21.93 L37.13 17.41 M37.13 21.93 L43.00 21.93 M22.27 34.02 L43.00 21.93 L43.00 25.73 L22.27 37.82"/></g></svg><h3>Steel &amp; Metal</h3></li>
+            <li class="cf-card" data-href="applications#power-generation" data-desc="Hold condenser vacuum and heat rate by catching fouling and scaling before they cost megawatts."><svg class="ind-ico ind-power-generation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-power-generation-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-power-generation-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M10 44 C15 31 15 20 12 5 H36 C33 20 33 31 38 44 Z"/><path d="M26 13 L18 27 H24 L22 37 L30.5 22.5 H24.5 Z"/></g></svg><h3>Power Generation</h3></li>
+            <li class="cf-card" data-href="applications#pulp-paper" data-desc="Balance heavy process-water demand against reuse, with early warning on deposits and biofouling."><svg class="ind-ico ind-pulp-paper" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-pulp-paper-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-pulp-paper-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M38.22 22.78 L26.2 10.76 A9.5 9.5 0 0 0 12.76 24.2 L24.78 36.22"/><circle cx="31.5" cy="29.5" r="9.5"/><path d="M12.76 24.2 L7.46 29.5 L16.96 39 H31.5"/><path d="M31.5 23.3 L32.49 23.46 L33.42 23.78 L34.28 24.24 L35.05 24.83 L35.7 25.52 L36.21 26.3 L36.59 27.14 L36.83 28.01 L36.92 28.9 L36.86 29.78 L36.66 30.63 L36.33 31.41 L35.89 32.13 L35.34 32.75 L34.71 33.26 L34.02 33.66 L33.28 33.94 L32.53 34.09 L31.77 34.11 L31.03 34.01 L30.33 33.79 L29.68 33.47 L29.11 33.06 L28.62 32.56 L28.23 32.01 L27.95 31.41 L27.76 30.78 L27.69 30.14 L27.72 29.52 L27.85 28.92 L28.07 28.36 L28.37 27.86 L28.74 27.43 L29.17 27.07 L29.64 26.79 L30.14 26.6 L30.65 26.5 L31.15 26.49 L31.64 26.55 L32.1 26.7 L32.51 26.91 L32.87 27.18 L33.18 27.49 L33.42 27.84 L33.59 28.22 L33.69 28.61 L33.73 28.99 L33.7 29.36 L33.61 29.71 L33.46 30.03 L33.28 30.3 L33.05 30.53 L32.81 30.71 L32.54 30.84 L32.27 30.92 L32 30.95 L31.75 30.93 L31.51 30.87 L31.31 30.77 L31.13 30.64" stroke-linecap="round"/></g></svg><h3>Pulp &amp; Paper</h3></li>
+            <li class="cf-card" data-href="applications#cement" data-desc="Protect kiln and mill cooling with fewer manual tests and tighter control of make-up water."><svg class="ind-ico ind-cement" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-cement-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-cement-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M4 29 V22 L9 16 H16 V29"/><path d="M7.6 22 L10.4 18.6 H13.4 V22 Z"/><rect x="4" y="29" width="40" height="4.5" rx="1"/><path d="M20 16.65 L39.13 7.77 Q42.4 13.6 42.87 20.23 L22 23.35 Q20.4 20 20 16.65 Z"/><path d="M30.52 11.77 Q32.4 16.6 33.48 21.63"/><path d="M22 23.35 L20 29 M40 20.66 V29"/><circle cx="11" cy="37.8" r="3.8"/><circle cx="35" cy="37.8" r="3.8"/><circle cx="11" cy="37.8" r="1"/><circle cx="35" cy="37.8" r="1"/></g></svg><h3>Cement Manufacturing</h3></li>
+            <li class="cf-card" data-href="applications#refineries-petrochemicals" data-desc="Predict exchanger fouling and corrosion across complex cooling networks to avoid unplanned throughput loss."><svg class="ind-ico ind-refineries-petrochemicals" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-refineries-petrochemicals-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-refineries-petrochemicals-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M13 6 H35 Q40 24 35 42 H13 Q8 24 13 6 Z"/><path d="M11.1 15 H36.9 M11.1 33 H36.9"/><path d="M24 18 C24 18 20 23 20 25.5 A4 4 0 0 0 28 25.5 C28 23 24 18 24 18 Z"/></g></svg><h3>Refineries &amp; Petrochemicals</h3></li>
+            <li class="cf-card" data-href="applications#data-centres" data-desc="Lower water usage effectiveness (WUE) while chillers and towers keep the white space at temperature."><svg class="ind-ico ind-data-centres" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-data-centres-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-data-centres-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><rect x="10" y="5" width="28" height="38" rx="3"/><path d="M10 17.7 H38 M10 30.3 H38"/><path d="M15 11.35 H26"/><circle cx="32" cy="11.35" r="1.6"/><path d="M15 24 H26"/><circle cx="32" cy="24" r="1.6"/><path d="M15 36.65 H26"/><circle cx="32" cy="36.65" r="1.6"/></g></svg><h3>Data Centres</h3></li>
+            <li class="cf-card" data-href="applications#hvac-district-cooling" data-desc="Run towers at higher cycles of concentration and cut energy per tonne of cooling delivered."><svg class="ind-ico ind-hvac-district-cooling" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-hvac-district-cooling-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-hvac-district-cooling-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><circle cx="24" cy="24" r="3"/><path transform="rotate(0 24 24)" d="M24 21 C19.5 16 20 9.5 25 7.5 C30 9.5 29 16 24 21 Z"/><path transform="rotate(120 24 24)" d="M24 21 C19.5 16 20 9.5 25 7.5 C30 9.5 29 16 24 21 Z"/><path transform="rotate(240 24 24)" d="M24 21 C19.5 16 20 9.5 25 7.5 C30 9.5 29 16 24 21 Z"/></g></svg><h3>HVAC &amp; District Cooling</h3></li>
+            <li class="cf-card" data-href="applications#other-water-intensive" data-desc="Any site with cooling towers and a water bill: textiles, food, pharma, chemicals and more."><svg class="ind-ico ind-other-water-intensive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="smy-other-water-intensive-ring" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="44" y2="44"><stop offset="0" stop-color="#B3EEF3"/><stop offset="0.5" stop-color="#5CC4D6"/><stop offset="1" stop-color="#0B7A98"/></linearGradient></defs><g fill="none" stroke="url(#smy-other-water-intensive-ring)" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"><path d="M10 5.5 H26 M18 5.5 V12"/><path d="M5 9 V25"/><path d="M5 12 H28 A10 10 0 0 1 38 22 V27 H30 V23.5 A2.5 2.5 0 0 0 27.5 21 H5"/><path d="M34 31 C34 31 29 37 29 39.5 A5 5 0 0 0 39 39.5 C39 37 34 31 34 31 Z"/></g></svg><h3>Other Water-Intensive Industries</h3></li>
+          </ul>
+        </div>
+        <div class="cf-cap" id="cfCap" aria-live="polite"></div>
+        <div class="cf-ctrl"><button type="button" class="cf-btn cf-prev" aria-label="Previous industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><div class="cf-dots" role="group" aria-label="Choose an industry"></div><button type="button" class="cf-btn cf-next" aria-label="Next industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button></div>
+      </div>
+      <div class="wide-cta rv"><a class="btn" href="book-a-demo" data-demo>Book a demo</a></div>
+    </div>
+  </section>
+
+  <section class="prob cv" id="problems" aria-labelledby="prob-title">
+    <div class="wrap">
+      <h2 id="prob-title" class="rv">Problem To Prediction</h2>
+      <p class="sub rv">Real industrial problems that inspired SMAYAA</p>
+      <div class="cards rv" id="cards">
+        <article class="pcard on" tabindex="0"><img class="photo" src="img/scaling-heat-transfer-loss.webp" alt="Cooling-water pipe almost closed by thick mineral scale" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>Scaling &amp; heat transfer loss</h3><p>Forecasts scaling tendency from water chemistry and ΔT drift, before heat transfer drops.</p></div></article>
+        <article class="pcard" tabindex="0"><img class="photo" src="img/corrosion-asset-damage.webp" alt="Cut cooling-water pipe with its bore rusted and pitted by corrosion" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>Corrosion &amp; asset damage</h3><p>Tracks corrosion risk across metallurgy so inhibitor dosing matches real conditions.</p></div></article>
+        <article class="pcard" tabindex="0"><img class="photo" src="img/oil-in-cooling-water.webp" alt="Oil sheen spreading across a cooling-water basin below an inflow pipe" style="object-position:50% 82%" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>Oil in cooling water</h3><p>Flags hydrocarbon ingress early from conductivity, turbidity and process signals.</p></div></article>
+        <article class="pcard" tabindex="0"><img class="photo" src="img/biofouling-microbiological-growth.webp" alt="Filter cartridge streaked with green biofilm inside a strainer housing" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>Biofouling &amp; microbiological growth</h3><p>Spots the conditions that favour microbial growth and times biocide dosing to them.</p></div></article>
+        <article class="pcard" tabindex="0"><img class="photo" src="img/high-dirt-loads-clogging.webp" alt="Mesh strainer basket caked with dirt and debris" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>High dirt loads &amp; clogging</h3><p>Predicts filter and strainer loading so cleaning is planned, not an emergency.</p></div></article>
+        <article class="pcard" tabindex="0"><img class="photo" src="img/deposit-build-up-in-scale-pits.webp" alt="Concrete pit with a layer of settled sludge and deposits" width="572" height="1024" loading="lazy" decoding="async"><div class="lbl"><h3>Deposit build-up in scale pits</h3><p>Models where solids settle so pit cleaning happens before capacity is lost.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mods cv" id="modules" aria-labelledby="mods-title">
+    <div class="wrap">
+      <h2 id="mods-title" class="sr-only">Intelligence Modules</h2>
+      <div class="tabs rv" role="tablist" aria-label="Intelligence modules" id="tabs">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="screen" data-t="0">Water Balance &amp; Losses</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="screen" data-t="1" tabindex="-1">Cooling &amp; Heat Transfer</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="screen" data-t="2" tabindex="-1">Water Chemistry &amp; COC</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="screen" data-t="3" tabindex="-1">Asset Health</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="screen" data-t="4" tabindex="-1">Savings &amp; Sustainability</button>
+      </div>
+      <div class="stagebox rv" id="stagebox">
+        <figure class="lapx stand laptop" id="screen" role="tabpanel" aria-label="SMAYAA platform preview">
+          <div class="lap-scr" data-screen="water-balance"></div>
+          <img class="lap-frame" src="img/laptop-stand-frame.webp" width="1500" height="1268" loading="lazy" decoding="async" alt="SMAYAA platform screen on a laptop">
+        </figure>
+      </div>
+    </div>
+  </section>
 </main>
-<script>
-// hooks the logo animation calls: the copy fades in as the lockup settles, and the particle field starts straight away
-(() => {
-  const cbs = [];
-  window.SMY = {
-    instant: false,
-    whenLanded(f) { f(); },
-    ready(fb, instant) { if (instant) document.documentElement.classList.add('done'); },
-    time(t, END) { if (t >= END - 1.2) document.documentElement.classList.add('done'); }
-  };
-  setTimeout(() => document.documentElement.classList.add('done'), 7000);   // never keep the text hidden
-})();
-</script>
-<script>(() => {
-  'use strict';
-  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
-  const html = document.documentElement;
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
-  const ease = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
 
-  /* ---------------- hero: interactive net ---------------- */
-  const cv = $('#net'); if (!cv) return;
-  const ctx = cv.getContext('2d');
-  let W = 0, H = 0, running = false, visible = true;
-  // the cursor deforms the surface: a soft swell with rings rippling out from it (no lines, no glow)
-  const mouse = { x: 0, y: 0, sx: 0, sy: 0, on: false, k: 0 };
-  // A plane of particles seen in perspective, rolling in slow waves.
-  // World units: X across, Z into the screen, Y up. Rows are evenly spaced in the world, so they bunch up toward the horizon.
-  // The field starts a little way from the camera (ZN) so the lower half of the hero stays densely filled.
-  const SEP = .13, ZN = 2.4, ZF = 18;
-  let f = 1, horizon = 0, camY = 1, NX = 0, NZ = 0;
-  function build() {
-    const dpr = Math.min(devicePixelRatio || 1, 1.5);
-    W = cv.clientWidth; H = cv.clientHeight;
-    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    f = Math.max(W, H * 1.25) * .62;
-    horizon = H * .38;
-    // nearest row sits below the bottom edge even at a wave crest (waves move it up to ~0.37 world units)
-    camY = (H * 1.02 - horizon) * ZN / f + .4;
-    NX = 2 * Math.ceil(((W / 2 + 60) * ZF / f + 1) / SEP) + 1;
-    NZ = Math.ceil((ZF - ZN) / SEP);
-  }
-  function frame(ms) {
-    const t = ms / 1000;
-    mouse.sx += (mouse.x - mouse.sx) * .12; mouse.sy += (mouse.y - mouse.sy) * .12;
-    mouse.k += ((mouse.on ? 1 : 0) - mouse.k) * .05;
-    const mk = mouse.k, R = clamp(W * .14, 130, 240), R2 = R * R;
-    ctx.clearRect(0, 0, W, H);
-    const c = (NX - 1) / 2;
-    for (let r = NZ - 1; r >= 0; r--) {                 // far to near, so near particles draw on top
-      const Z = ZF - r * SEP, sc = f / Z;
-      const depth = (Z - ZN) / (ZF - ZN);
-      const a = (.22 + .7 * Math.pow(1 - depth, .9)) * Math.min(1, (1 - depth) / .16);
-      if (a <= .01) continue;
-      const size = clamp(SEP * sc * .06, .7, 3.6);
-      ctx.fillStyle = `rgba(206,246,250,${a.toFixed(3)})`;
-      const half = Math.ceil((W / 2 + 40) / sc / SEP);
-      const i0 = Math.max(0, Math.floor(c - half)), i1 = Math.min(NX - 1, Math.ceil(c + half));
-      const zw = Math.sin(Z * .85 - t * 1.15);
-      for (let ix = i0; ix <= i1; ix++) {
-        const X = (ix - c) * SEP;
-        const Y = .16 * (Math.sin(X * 1.05 + t * 1.35) + zw) + .05 * Math.sin((X + Z) * 2.3 - t * 2);
-        let sx = W / 2 + X * sc, sy = horizon + (camY - Y) * sc;
-        if (mk > .005) {
-          // distance measured on the plane's slant (vertical squashed) so the dent sits on the surface
-          const dx = sx - mouse.sx, dy = (sy - mouse.sy) * 1.8, d2 = dx * dx + dy * dy;
-          if (d2 < R2) {
-            const d = Math.sqrt(d2), q = 1 - d / R, s = q * q * (3 - 2 * q) * mk;
-            const ring = Math.sin(d * .06 - t * 5);         // ripples travelling outward from the cursor
-            const push = s * R * .3;                        // particles are pushed out, piling up into a rim
-            sx += dx / (d || 1) * push;
-            sy += (sy - mouse.sy) / (d || 1) * push * .55 - s * (16 + sc * .05) * (1 + ring * .6);
-          }
-        }
-        if (sx < -10 || sx > W + 10 || sy < -10 || sy > H + 10) continue;
-        ctx.fillRect(sx - size / 2, sy - size / 2, size, size);
-      }
-    }
-    if (running) requestAnimationFrame(frame);
-  }
-  // the field only animates once the logo has landed, so the loader gets the whole frame budget
-  let netLive = false;
-  function setRun(on) { on = on && netLive; if (on && !running && !reduced) { running = true; requestAnimationFrame(frame); } else if (!on) running = false; }
-  window.SMY.whenLanded(() => setTimeout(() => { netLive = true; setRun(visible && !document.hidden); }, 350));
-  build();
-  frame(performance.now());   // one still frame shows through while the white fades
-  addEventListener('resize', () => { build(); if (!running) frame(performance.now()); }, { passive: true });
-  const hero = cv.closest('section') || cv.parentElement;
-  hero.addEventListener('pointermove', e => {
-    if (e.pointerType === 'touch') return;
-    const b = cv.getBoundingClientRect(); mouse.x = e.clientX - b.left; mouse.y = e.clientY - b.top;
-    if (!mouse.on && mouse.k < .05) { mouse.sx = mouse.x; mouse.sy = mouse.y; }
-    mouse.on = true;
-  }, { passive: true });
-  hero.addEventListener('pointerleave', () => { mouse.on = false; });
-  new IntersectionObserver(([en]) => { visible = en.isIntersecting; setRun(visible && !document.hidden); }).observe(hero);
-  document.addEventListener('visibilitychange', () => setRun(visible && !document.hidden));
+<template id="sx-logo"><img class="lg" src="data:image/svg+xml;base64,PHN2ZyBpZD0ib3BlbmVyIiB2aWV3Qm94PSItNy40IDQ5NC43IDE0MTQuOSA0MjYuNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNNQVlBQS5haSBsb2dvIj4NCiAgICAgICAgPGRlZnM+DQogICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnVGVhbCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxNTAiIHkxPSIwIiB4Mj0iODUwIiB5Mj0iMCI+DQogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzNGIzYzgiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDlkYjYiPjwvc3RvcD4NCiAgICAgICAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ0RhcmsiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTUwIiB5MT0iMCIgeDI9IjUwMCIgeTI9IjAiPg0KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMDA2ZDg4Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGE4OGE0Ij48L3N0b3A+DQogICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgICA8IS0tIHBhbGUgY3lhbiBhdCB0aGUgdG9wIGxlZnQsIGRlZXBlbmluZyB0byBibHVlLXRlYWwgYXQgdGhlIGJvdHRvbSByaWdodCAtLT4NCiAgICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdSaW5nIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjMwMCIgeTE9IjMwOCIgeDI9IjExMDAiIHkyPSIxMTA4Ij4NCiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2IzZWVmMyI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjNWNjNGQ2Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGI3YTk4Ij48L3N0b3A+DQogICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICAgICAgICA8Y2xpcFBhdGggaWQ9ImNsaXBVIj48cGF0aCBpZD0iY2xpcFVQYXRoIiBkPSJNMTM1IDcwOCBBNTY1IDU2NSAwIDAgMSAxMjY1IDcwOCBBNTY1IDU2NSAwIDAgMCAxMzUgNzA4IFoiPjwvcGF0aD48L2NsaXBQYXRoPg0KICAgICAgICAgIDxjbGlwUGF0aCBpZD0iY2xpcEwiPjxwYXRoIGlkPSJjbGlwTFBhdGgiIGQ9Ik0xMzUgNzA4IEE1NjUgNTY1IDAgMCAwIDEyNjUgNzA4IEE1NjUgNTY1IDAgMCAxIDEzNSA3MDggWiI+PC9wYXRoPjwvY2xpcFBhdGg+DQogICAgICAgICAgPG1hc2sgaWQ9InJpbmdNYXNrIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDQwIj4NCiAgICAgICAgICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0NDAiIGZpbGw9IiNmZmYiPjwvcmVjdD4NCiAgICAgICAgICAgIDxyZWN0IGlkPSJnYXAiIHg9IjcwMCIgeT0iMzIyLjc3OTA2MTkxNjE3MTgiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9Ijc3MC40NDE4NzYxNjc2NTYzIiBmaWxsPSIjMDAwIj48L3JlY3Q+PHJlY3QgaWQ9ImdhcEwiIHg9IjAiIHk9IjcwOCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSIwIiBmaWxsPSIjMDAwIj48L3JlY3Q+DQogICAgICAgICAgPC9tYXNrPg0KICAgICAgICAgIDxnIGlkPSJzaGFkZSI+DQogICAgICAgICAgICA8Y2lyY2xlIGN4PSI3MDAiIGN5PSI3MDgiIHI9IjU3MiIgZmlsbD0iIzc1ZDhlMCI+PC9jaXJjbGU+DQogICAgICAgICAgICA8ZyBpZD0ic2hhZGVTaGlmdCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTk1IDApIj4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9IndhdmVBIiBmaWxsPSJ1cmwoI2dUZWFsKSIgZD0iTS0zMDAgMCBMMTcwMCAwIEwxNzAwIDQyNSBMMTE4MCA0MjUgQzEwMDAgMzk1IDkwMCAzODUgODMwIDM5MiBDNzAwIDQxMCA2NDAgNDkwIDYxNSA1ODAgQzU5NSA2NjAgNTg1IDc2MCA1NjAgODYwIEM1MzAgOTcwIDQ1MCAxMDI4IDMyMCAxMDI2IEwtMzAwIDEwMjIgWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0LjQgMCkiPjwvcGF0aD4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9IndhdmVCIiBmaWxsPSJ1cmwoI2dEYXJrKSIgZD0iTS0zMDAgMCBMNDk3IDAgQzQ4OCAyNjAgNDkyIDQwMCA0OTAgNDcwIEM0ODggNTYwIDQzMCA2MjAgMzYwIDY2NSBDMzAwIDcwMCAyMDAgNzIyIC0zMDAgNzMwIFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02LjQgMCkiPjwvcGF0aD4NCiAgICAgICAgICAgICAgPHBhdGggaWQ9ImRhcmtlc3QiIGZpbGw9IiMwMDU4NmUiIGQ9Ik0tMzAwIDAgTDM0NSAwIEMzNDAgMjIwIDI5MCAzMjAgMTYwIDMzNSBMLTMwMCAzMzUgWiIgb3BhY2l0eT0iMCI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICAgIDwvZz4NCiAgICAgICAgPC9kZWZzPg0KICAgICAgICA8ZyBpZD0ic3BoZXJlIiBvcGFjaXR5PSIwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MDAgNzA4KSBzY2FsZSgxKSB0cmFuc2xhdGUoLTcwMCAtNzA4KSI+DQogICAgICAgICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXBVKSI+PHVzZSBocmVmPSIjc2hhZGUiPjwvdXNlPjwvZz4NCiAgICAgICAgICA8ZyBjbGlwLXBhdGg9InVybCgjY2xpcEwpIj48dXNlIGhyZWY9IiNzaGFkZSI+PC91c2U+PC9nPg0KICAgICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgIDxjaXJjbGUgaWQ9Im91dGxpbmUiIGN4PSI3MDAiIGN5PSI3MDgiIHI9IjU2NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjBlZGYwIiBzdHJva2Utd2lkdGg9IjQwIiBvcGFjaXR5PSIwIj48L2NpcmNsZT4NCiAgICAgICAgPC9nPg0KICAgICAgICA8Y2lyY2xlIGlkPSJyaW5nIiBjeD0iNzAwIiBjeT0iNzA4IiByPSI1NjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnUmluZykiIHN0cm9rZS13aWR0aD0iOTUuNTM0NzkyNjQ0Nzg5MzkiIG1hc2s9InVybCgjcmluZ01hc2spIiBvcGFjaXR5PSIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDUuOTA4NTQxODcwMTE3MTggNzA4KSBzY2FsZSgwLjMyNDQ4OTExMTY4MTY2NzQpIHRyYW5zbGF0ZSgtNzAwIC03MDgpIj48L2NpcmNsZT4NCiAgICAgICAgPGcgaWQ9IndvcmRXcmFwIiBvcGFjaXR5PSIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NzIuNDE3ODU3NDk5NTU2IDcwOCkgc2NhbGUoMSkgdHJhbnNsYXRlKC03MDAgLTcwOCkiPg0KICAgICAgICAgIDx0ZXh0IHg9IjcwMCIgeT0iNzY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ0NlbnR1cnkgR290aGljJywgSm9zdCwgRnV0dXJhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2NiIgZm9udC13ZWlnaHQ9IjcwMCI+PHRzcGFuIGZpbGw9IiMwZDRmNjYiIGxldHRlci1zcGFjaW5nPSI0MCI+U01BWUFBLjwvdHNwYW4+PHRzcGFuIGZpbGw9IiMxZmI2Y2IiIGxldHRlci1zcGFjaW5nPSI2Ij5haTwvdHNwYW4+PC90ZXh0Pg0KICAgICAgICA8L2c+DQogICAgICA8L3N2Zz4=" alt="" width="120" height="36"></template>
 
-})();
-</script>
-<script>
-// SMAYAA.ai logo, self-contained (font included). Click anywhere to replay.
-// The logo on its own: plays once as the page opens, settles into the horizontal lockup, and the ring colour keeps flowing
-(() => {
-      const CX = 700, CY = 708, R = 565, N = 12;
-      const $ = id => document.getElementById(id);
-      const NS = 'http://www.w3.org/2000/svg';
-  
-      // Lines (N per hemisphere; i=0 is the lens edge / equator)
-      const lineEls = { u: [], l: [] };
-      for (const side of ['u','l']) for (let i = 0; i < N; i++) {
-        const p = document.createElementNS(NS, 'path');
-        $('lines').appendChild(p); lineEls[side].push(p);
-      }
-  
-      // Dots, snapped onto the lines
-      const raw = { u: [[965,285],[889,357],[568,349],[370,533],[268,601]],
-                    l: [[288,926],[512,1110],[1050,1040],[909,1150]] };
-      const dots = [];
-      for (const side of ['u','l']) for (const [x,y] of raw[side]) {
-        const lam = Math.asin((x - CX) / R);
-        const f = Math.min(N-1, Math.max(1, Math.round(Math.abs(y - CY) / (R * Math.cos(lam)) * N))) / N;
-        // each electron has a twin starting round the back, so the front stays busy as they orbit
-        for (const start of [lam, lam + Math.PI]) {
-          const c = document.createElementNS(NS, 'circle');
-          c.setAttribute('r', 15); $('dots').appendChild(c);
-          dots.push({ side, lam: start, f, el: c, spin: 0.45 + 0.25 * ((dots.length * 37) % 9) / 8 });
-        }
-      }
-  
-      // One continuous motion keyed on progress p (0 to 1); when looping it holds, fades and starts again
-      const MOTION = 7.5, HOLD = 2.5, FADE = 0.6, GAPT = 0.3;
-      // After the logo opens: the ring shrinks to the left and the name slides out of it into a horizontal lockup.
-      // Sizes follow the name's measured width, so the lockup keeps its proportions whatever font loads.
-      const SHIFT = 2.4, END = MOTION + SHIFT;
-      function lockup(t) {
-        const u = sm((t - MOTION) / SHIFT), q = 0.5 - 0.5 * Math.cos(Math.PI * u);
-        const W = $('wordWrap').getBBox().width || 1277;
-        const r = W / 6.6, sc = r / R;                      // final ring radius and scale
-        const cx = CX + (1.21 * r - W) / 2;                 // centres the ring + name lockup on the canvas
-        const dx = cx - 0.21 * r + W / 2 - CX;              // the name starts just inside the ring
-        return { q, r, sc, cx, dx, W };
-      }
+<footer class="foot" id="contact">
+  <canvas class="foot-wave" id="footWave" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="foot-logo" viewBox="0 0 440 300" role="img" aria-label="SMAYAA.ai">
+          <defs>
+            <linearGradient id="fRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b3eef3"/><stop offset="1" stop-color="#5cc4d6"/></linearGradient>
+            <mask id="fGap" maskUnits="userSpaceOnUse" x="0" y="0" width="440" height="300"><rect width="440" height="300" fill="#fff"/><rect x="0" y="122" width="440" height="56" fill="#000"/></mask>
+          </defs>
+          <circle cx="220" cy="150" r="128" fill="none" stroke="url(#fRing)" stroke-width="10" mask="url(#fGap)"/>
+          <text x="220" y="168" text-anchor="middle" font-family="'Century Gothic', Jost, Futura, sans-serif" font-size="50" font-weight="700"><tspan fill="#fff" letter-spacing="12">SMAYAA.</tspan><tspan fill="#8fe3ee" letter-spacing="2">ai</tspan></text>
+        </svg>
+        <p>AI-powered industrial water intelligence platform.</p>
+        <a class="foot-cta" href="book-a-demo" data-demo>Book a Demo <span aria-hidden="true">→</span></a>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <div>
+          <h2>Platform</h2>
+          <a href="applications">Applications</a>
+          <a href="modules">Intelligence Modules</a>
+          <a href="how-it-works">How SMAYAA Works</a>
+          <a href="case-studies">Case Studies</a>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <a href="#home">Home</a>
+          <a href="about">About</a>
+          <a href="faq">FAQs</a>
+          <a href="book-a-demo#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bot"><span>© 2026 SMAYAA.ai</span><a href="#contact">Privacy Policy</a></div>
+  </div>
+</footer>
 
-      const DUR = MOTION + HOLD + FADE + GAPT;
-      const keys = {
-        sphereA: [[0,0],[0.12,1]],
-        dx:      [[0,140],[0.28,30],[0.48,-55],[0.66,-95]],
-        dl:      [[0,15],[0.28,3],[0.48,-8],[0.66,-17]],
-        darkest: [[0,1],[0.26,0]],
-        o:       [[0,0],[0.22,0.012],[0.38,0.115],[0.55,0.37],[0.88,1]],
-        dotA:    [[0,1],[0.4,1],[0.56,0]],
-        textA:   [[0,0],[0.42,0],[0.58,1]],
-        textS:   [[0,0.28],[0.54,0.28],[0.97,1]],
-        outA:    [[0,1],[0.6,1],[0.86,0]],
-        ringA:   [[0,0],[0.6,0],[0.86,1]],
-        gap:     [[0,0],[0.64,0],[0.97,290]],
-      };
-      // Monotone cubic (Fritsch-Carlson) so velocity is continuous through every key
-      function makeTrack(pts) {
-        const n = pts.length, xs = pts.map(p=>p[0]), ys = pts.map(p=>p[1]);
-        const d = [], m = new Array(n).fill(0);
-        for (let i = 0; i < n-1; i++) d.push((ys[i+1]-ys[i]) / (xs[i+1]-xs[i]));
-        for (let i = 1; i < n-1; i++) m[i] = d[i-1]*d[i] <= 0 ? 0 : (d[i-1]+d[i]) / 2;
-        for (let i = 0; i < n-1; i++) {
-          if (d[i] === 0) { m[i] = 0; m[i+1] = 0; continue; }
-          const a = m[i]/d[i], b = m[i+1]/d[i], h = a*a + b*b;
-          if (h > 9) { const t = 3/Math.sqrt(h); m[i] = t*a*d[i]; m[i+1] = t*b*d[i]; }
-        }
-        return x => {
-          if (x <= xs[0]) return ys[0];
-          if (x >= xs[n-1]) return ys[n-1];
-          let i = 0; while (x > xs[i+1]) i++;
-          const hgt = xs[i+1]-xs[i], t = (x-xs[i])/hgt, t2 = t*t, t3 = t2*t;
-          return (2*t3-3*t2+1)*ys[i] + (t3-2*t2+t)*hgt*m[i] + (-2*t3+3*t2)*ys[i+1] + (t3-t2)*hgt*m[i+1];
-        };
-      }
-      const tracks = {}; for (const k in keys) tracks[k] = makeTrack(keys[k]);
-      const sm = x => Math.max(0, Math.min(1, x));
-  
-      function render(t) {
-        const u = sm(t / MOTION), p = 0.5 - 0.5 * Math.cos(Math.PI * u);
-        const s = {}; for (const k in tracks) s[k] = tracks[k](p);
-        const endFade = 1 - sm((t - MOTION - HOLD) / FADE);
-        s.textA *= endFade; s.ringA *= endFade;
-        const lensRy = s.o * R, k = 1 - s.o;
-  
-        const sc = 0.92 + 0.08 * s.sphereA;
-        // once the lens has closed, hide the sphere so its zero-width edges don't leave hairlines beside the text
-        $('sphere').setAttribute('opacity', s.o > 0.995 ? 0 : s.sphereA);
-        $('sphere').style.display = (s.o > 0.995 || s.sphereA <= 0.001) ? 'none' : '';
-        $('sphere').setAttribute('transform', `translate(${CX} ${CY}) scale(${sc}) translate(${-CX} ${-CY})`);
-  
-        $('shadeShift').setAttribute('transform', `translate(${s.dx} 0)`);
-        $('darkest').setAttribute('opacity', s.darkest);
-        // the waves keep their shape as the sphere closes; the closing lens simply cuts them off
-        // a gentle, uneven side-to-side flow, horizontal only, with the two layers slightly out of step like water
-        $('waveA').setAttribute('transform', `translate(${(14 * Math.sin(t * 1.05) + 6 * Math.sin(t * 2.2 + 0.7)).toFixed(1)} 0)`);
-        $('waveB').setAttribute('transform', `translate(${(11 * Math.sin(t * 1.05 + 0.9) + 5 * Math.sin(t * 1.8 + 2)).toFixed(1)} 0)`);
-        $('clipUPath').setAttribute('d', `M${CX-R} ${CY} A${R} ${R} 0 0 1 ${CX+R} ${CY} A${R} ${lensRy} 0 0 0 ${CX-R} ${CY} Z`);
-        $('clipUPath').setAttribute('d', $('clipUPath').getAttribute('d') + ` M${CX-R} ${CY} A${R} ${R} 0 0 0 ${CX+R} ${CY} A${R} ${lensRy} 0 0 1 ${CX-R} ${CY} Z`);
-  
-        const lineFade = sm((1 - s.o) / 0.25);
-        const oddFade = 1 - sm(s.o / 0.3);
-        for (const side of ['u','l']) lineEls[side].forEach((path, i) => {
-          const ry = R * (s.o + k * i / N);
-          path.setAttribute('d', `M${CX-R} ${CY} A${R} ${ry} 0 0 ${side==='u'?1:0} ${CX+R} ${CY}`);
-          path.setAttribute('opacity', lineFade * (i % 2 ? oddFade : 1));
-        });
-  
-        const dl = s.dl * Math.PI / 180;
-        for (const d of dots) {
-          // electrons orbit the sphere along their lines, slipping round the back and coming back in front
-          let lam = d.lam + dl + t * d.spin;
-          lam = ((lam + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI;
-          const ry = R * (s.o + k * d.f);
-          const edge = sm((Math.PI/2 - Math.abs(lam)) / 0.25);
-          d.el.setAttribute('cx', CX + R * Math.sin(lam));
-          d.el.setAttribute('cy', CY + (d.side==='u' ? -1 : 1) * ry * Math.cos(Math.max(-Math.PI/2, Math.min(Math.PI/2, lam))));
-          d.el.setAttribute('opacity', s.dotA * edge);
-        }
-  
-        $('dots').style.display = s.dotA <= 0.001 ? 'none' : '';
-        $('ring').setAttribute('opacity', s.ringA);
-        $('ring').style.display = s.ringA <= 0.001 ? 'none' : '';
-        const L = lockup(t);
-        // the ring shrinks and moves left; its line ends a little bolder, close to the weight of the letters
-        $('ring').setAttribute('transform', `translate(${CX + (L.cx - CX) * L.q} ${CY}) scale(${1 + (L.sc - 1) * L.q}) translate(${-CX} ${-CY})`);
-        $('ring').setAttribute('stroke-width', 44 + (31 / L.sc - 44) * L.q);
-        // the gap closes on the left and stays open on the right, where the name passes through
-        const gapH = s.gap + (250 / L.sc - s.gap) * L.q;
-        if (gapH > 0.5) $('ring').setAttribute('mask', 'url(#ringMask)'); else $('ring').removeAttribute('mask');
-        $('gap').setAttribute('y', CY - gapH / 2);
-        $('gap').setAttribute('height', gapH);
-        const gapLH = gapH * (1 - L.q);
-        $('gapL').setAttribute('y', CY - gapLH / 2);
-        $('gapL').setAttribute('height', gapLH);
-  
-        const ty = 724 + (708 - 724) * sm((s.textS - 0.28) / 0.72);
-        $('wordWrap').setAttribute('opacity', s.textA);
-        $('wordWrap').setAttribute('transform', `translate(${CX + L.dx * L.q} ${ty}) scale(${s.textS}) translate(${-CX} ${-CY})`);
-        // the view narrows from the full circle to the horizontal lockup
-        const from = [30, 120, 1340, 1180], pad = 30;
-        const to = [L.cx - L.r - pad, CY - L.r - pad, (CX + L.dx + L.W / 2) - (L.cx - L.r) + 2 * pad, 2 * L.r + 2 * pad];
-        $('opener').setAttribute('viewBox', from.map((v, i) => (v + (to[i] - v) * L.q).toFixed(1)).join(' '));
-      }
 
-      const SPEED = 2;
-      let t = 0, last = null;
-      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const H = window.SMY || {};
-      // the settled lockup's viewBox, so the header slot can be sized to fit it exactly
-      function finalBox() { const L = lockup(END), pad = 30;
-        return [L.cx - L.r - pad, CY - L.r - pad, (CX + L.dx + L.W / 2) - (L.cx - L.r) + 2 * pad, 2 * L.r + 2 * pad]; }
-      function tick(now) {
-        if (last !== null) t += Math.min(0.1, (now - last) / 1000) * SPEED;
-        last = now;
-        if (t <= END + 0.3) render(Math.min(t, END));
-        $('gRing').setAttribute('gradientTransform', `rotate(${(t * 30 % 360).toFixed(2)} ${CX} ${CY})`);
-        if (H.time) H.time(t, END, SPEED);
-        requestAnimationFrame(tick);
-      }
-      H.seek = x => { if (t < x) t = x; };
-      const fontReady = document.fonts
-        ? Promise.race([document.fonts.load('700 100px Jost'), new Promise(r => setTimeout(r, 1500))])
-        : Promise.resolve();
-      // pages without the intro (and reduced motion) show the finished logo straight away
-      if (reduced || H.instant) fontReady.then(() => { render(END); if (H.ready) H.ready(finalBox(), true); });
-      else { render(0); fontReady.then(() => { if (H.ready) H.ready(finalBox(), false); requestAnimationFrame(tick); }); }
-})();
-</script>
+<script src="assets/site.js?v=1c6a055c" defer></script>
+<script src="assets/net.js?v=5e1564d4" defer></script>
+<script src="assets/screens.js?v=e8c07508" defer></script>
+<script src="assets/home.js?v=b8d914b3" defer></script>
+<script src="assets/logo.js?v=650fa6c9" defer></script>
 </body>
 </html>
