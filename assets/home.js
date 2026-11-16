@@ -193,20 +193,76 @@
 
 })();
 
-// "See how it works": the demo video in a pop-up with the browser's own controls (play/pause, volume, seek, fullscreen)
+// "See how it works": the demo video in a pop-up with our own controls (play/pause, seek, volume, mute, full screen),
+// so they look and behave the same in every browser
 (() => {
   'use strict';
-  const dlg = document.getElementById('vmod'), vid = document.getElementById('vdemo');
+  const $ = id => document.getElementById(id);
+  const dlg = $('vmod'), vid = $('vdemo');
   if (!dlg || !vid || typeof dlg.showModal !== 'function') return;     // old browsers just follow the link to the file
-  let opener = null;
+  const box = vid.parentElement, seek = $('vcSeek'), vol = $('vcVol'), time = $('vcTime');
+  const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  const toggle = () => { if (vid.paused || vid.ended) vid.play().catch(() => {}); else vid.pause(); };
+  let opener = null, idleT = 0, dragging = false;
+
+  const wake = () => { box.classList.remove('idle'); clearTimeout(idleT); idleT = setTimeout(() => { if (!vid.paused && !dragging) box.classList.add('idle'); }, 2600); };
+  const paint = () => {
+    const d = vid.duration || 0;
+    if (!dragging) { seek.value = d ? Math.round(vid.currentTime / d * 1000) : 0; }
+    seek.style.setProperty('--p', seek.value / 10 + '%');
+    time.textContent = fmt(dragging ? seek.value / 1000 * d : vid.currentTime) + ' / ' + fmt(d);
+  };
+  const paintVol = () => {
+    const v = vid.muted ? 0 : vid.volume;
+    vol.value = v; vol.style.setProperty('--p', v * 100 + '%');
+    box.classList.toggle('muted', v === 0);
+    $('vcMute').setAttribute('aria-label', v === 0 ? 'Unmute' : 'Mute');
+  };
+
+  vid.addEventListener('play', () => { box.classList.add('playing'); $('vcPlay').setAttribute('aria-label', 'Pause'); wake(); });
+  vid.addEventListener('pause', () => { box.classList.remove('playing', 'idle'); $('vcPlay').setAttribute('aria-label', 'Play'); });
+  ['timeupdate', 'loadedmetadata', 'durationchange', 'seeked'].forEach(ev => vid.addEventListener(ev, paint));
+  vid.addEventListener('volumechange', paintVol);
+
+  $('vcPlay').addEventListener('click', toggle);
+  $('vbig').addEventListener('click', toggle);
+  vid.addEventListener('click', toggle);
+  // seek: the bar follows the finger/mouse while dragging, the video jumps when it is let go (and while dragging, every few frames)
+  seek.addEventListener('pointerdown', () => { dragging = true; });
+  seek.addEventListener('input', () => { if (vid.duration) vid.currentTime = seek.value / 1000 * vid.duration; paint(); });
+  const endDrag = () => { if (dragging) { dragging = false; paint(); } };
+  seek.addEventListener('change', endDrag); addEventListener('pointerup', endDrag);
+  vol.addEventListener('input', () => { vid.volume = +vol.value; vid.muted = +vol.value === 0; });
+  $('vcMute').addEventListener('click', () => {
+    if (vid.muted || vid.volume === 0) { vid.muted = false; if (vid.volume === 0) vid.volume = .8; } else vid.muted = true;
+  });
+  $('vcFs').addEventListener('click', () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (box.requestFullscreen) box.requestFullscreen().catch(() => {});
+    else if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();           // iPhone: the system player
+  });
+  box.addEventListener('pointermove', wake); box.addEventListener('pointerdown', wake);
+  // keyboard while the pop-up is open: space/k play-pause, arrows seek 5 s, m mute, f full screen
+  dlg.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' && /Arrow/.test(e.key)) return;     // the sliders handle their own arrows
+    const k = e.key.toLowerCase();
+    if (k === ' ' || k === 'k') { if (e.target.tagName !== 'BUTTON') { e.preventDefault(); toggle(); } }
+    else if (k === 'arrowright') vid.currentTime = Math.min(vid.duration || 0, vid.currentTime + 5);
+    else if (k === 'arrowleft') vid.currentTime = Math.max(0, vid.currentTime - 5);
+    else if (k === 'm') $('vcMute').click();
+    else if (k === 'f') $('vcFs').click();
+    else return;
+    wake();
+  });
+
   document.querySelectorAll('[data-video]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault(); opener = a;
     if (!vid.src) vid.src = vid.dataset.src;                            // load the file only the first time it's opened
-    dlg.showModal();
+    dlg.showModal(); paintVol(); paint(); wake();
     vid.play().catch(() => {});                                          // the click counts as a gesture, so it plays with sound
   }));
   const close = () => dlg.open && dlg.close();
-  document.getElementById('vclose').addEventListener('click', close);
+  $('vclose').addEventListener('click', close);
   dlg.addEventListener('click', e => { if (e.target === dlg) close(); });   // click outside the video
-  dlg.addEventListener('close', () => { vid.pause(); if (opener) opener.focus(); });
+  dlg.addEventListener('close', () => { vid.pause(); if (document.fullscreenElement) document.exitFullscreen(); if (opener) opener.focus(); });
 })();
