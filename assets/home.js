@@ -22,8 +22,8 @@
   /* ---------------- industries coverflow ---------------- */
   (() => {
     const root = $('#indCf'), frame = root.querySelector('.cf-frame'), cards = [...root.querySelectorAll('.cf-card')];
-    const cap = $('#cfCap'), dotsEl = root.querySelector('.cf-dots'), N = cards.length;
-    const ROT = 44, DEPTH = .6, FALL = .56, FADE = .1, GAP = .05;
+    const count = root.querySelector('.cf-count'), cap = $('#cfCap'), dotsEl = root.querySelector('.cf-dots'), N = cards.length;
+    const SHRINK = .15, FADE = .3;
     let pos = 0, target = 0, width = 0, raf = null, drag = null, sel = -1, seen = false;
     const idx = p => ((Math.round(p) % N) + N) % N;
     const offOf = i => { let o = (((i - pos) % N) + N) % N; return o > N / 2 ? o - N : o; };   // shorter way round the ring
@@ -42,16 +42,17 @@
       if (i === sel) return; sel = i;
       cards.forEach((c, k) => c.classList.toggle('on', k === i));
       dots.forEach((d, k) => d.setAttribute('aria-current', k === i));
-      cap.innerHTML = `<p>${cards[i].dataset.desc} <a class="cf-more" href="${cards[i].dataset.href}">Explore ${cards[i].querySelector('h3').textContent} →</a></p>`;
+      cap.innerHTML = `<p>${cards[i].dataset.desc}</p><span class="go"><a class="cf-more" href="${cards[i].dataset.href}">Explore ${cards[i].querySelector('h3').textContent} <i aria-hidden="true">→</i></a></span>`;
+      if (count) count.innerHTML = `<b>${String(i + 1).padStart(2, '0')}</b> / ${String(N).padStart(2, '0')}`;
       if (seen && !reduced) play(cards[i]);
     }
     function paint() {
       if (!width) return;
-      const pitch = width * (1 + GAP);
       cards.forEach((c, i) => {
-        const off = offOf(i), d = Math.abs(off), ramp = Math.pow(d, FALL);
-        const tilt = Math.min(ROT * ramp, 82) * Math.sign(off);           // capped short of edge-on
-        c.style.transform = `translateX(calc(-50% + ${off * pitch}px)) translateZ(${-DEPTH * width * ramp}px) rotateY(${-tilt}deg)`;
+        const off = offOf(i), d = Math.abs(off);
+        const sc = 1 - SHRINK * Math.min(d, 2.5);                          // flat cards: smaller and fainter away from the centre
+        const x = (d <= 1 ? d * .99 : .99 + (d - 1) * .8) * width * Math.sign(off);   // keeps an even small gap between the shrinking cards
+        c.style.transform = `translateX(calc(-50% + ${x.toFixed(1)}px)) scale(${sc.toFixed(3)})`;
         const edge = Math.min(1, Math.max(0, N / 2 - d));                   // gone before it wraps to the other side
         c.style.opacity = Math.max(0, 1 - FADE * d) * edge;
         c.style.zIndex = 100 - Math.round(d);
@@ -86,7 +87,7 @@
     });
     frame.addEventListener('pointermove', e => {
       if (!drag || drag.id !== e.pointerId) return;
-      const pitch = width * (1 + GAP); if (!pitch) return;
+      const pitch = width * .99; if (!pitch) return;
       const now = performance.now(), prev = pos;
       pos = drag.pos - (e.clientX - drag.x) / pitch;
       drag.moved = Math.max(drag.moved, Math.abs(e.clientX - drag.x));
