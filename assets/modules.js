@@ -19,7 +19,12 @@
     view.style.setProperty('--mh', Math.max(...heads.map(h => h.offsetHeight)) + 'px');
     track.style.height = pin.offsetHeight + (N - 1) * step + 'px';
     // the module list beside it is exactly as tall as the card
-    const nav = $('.mnav'); if (nav) nav.style.setProperty('--navh', view.offsetHeight + 'px');
+    const nav = $('.mnav');
+    if (nav) {                                   // same height as the card; tighter rows, or taller, when the list doesn't fit
+      nav.classList.remove('tight', 'grow'); nav.style.setProperty('--navh', view.offsetHeight + 'px');
+      const over = () => nav.scrollHeight > nav.clientHeight + 1;
+      if (getComputedStyle(nav).position === 'sticky' && over()) { nav.classList.add('tight'); if (over()) nav.classList.add('grow'); }
+    }
     ancs.forEach((a, i) => { a.style.top = i * step + 'px'; });
   }
   const pinTop = () => parseFloat(getComputedStyle(pin).top) || 0;
